@@ -1,4 +1,4 @@
-package org.example;
+package ru.nsu.ccfit.haskov.main;
 
 public class Main {
     public static void main(String[] args) {
