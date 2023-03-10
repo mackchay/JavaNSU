@@ -1,21 +1,21 @@
 package ru.nsu.ccfit.haskov.operators.operator;
 
-import ru.nsu.ccfit.haskov.operators.pop.Pop;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class OperatorFactory {
-    Map<String, Operator> operatorMap = new HashMap<>();
+    Map<String, Class<?>> operatorMap = new HashMap<>();
+    String filename = "factoryConfig.txt";
 
-    OperatorFactory(String filename) {
-        
+    public OperatorFactory() throws IOException, ClassNotFoundException,
+            InstantiationException, IllegalAccessException {
+        InputStream inputStream = OperatorFactory.class.getResourceAsStream(filename);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        String operatorName;
+        while ((operatorName = reader.readLine()) != null) {
+            Class<?> operator = Class.forName(operatorName);
+            operatorMap.put(operatorName, operator);
+        }
     }
-}
-
-
 }

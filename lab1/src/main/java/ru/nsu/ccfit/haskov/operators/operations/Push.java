@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.haskov.operators.push;
+package ru.nsu.ccfit.haskov.operators.operations;
 
 import ru.nsu.ccfit.haskov.executionContext.ExecutionContext;
 import ru.nsu.ccfit.haskov.operators.operator.Operator;
