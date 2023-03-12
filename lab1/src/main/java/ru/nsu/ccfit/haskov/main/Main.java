@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 public class Main {
-    public static void main(String[] args) throws IOException,
-            ClassNotFoundException, InstantiationException, IllegalAccessException,
-            InvocationTargetException, NoSuchMethodException {
+    public static void main(String[] args) {
         StackCalculator stackCalculator = new StackCalculator("../calculator/example.txt");
         stackCalculator.run();
     }

@@ -8,34 +8,48 @@ import ru.nsu.ccfit.haskov.operators.operator.OperatorFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 
 public class StackCalculator {
-    BufferedReader reader;
-    ExecutionContext executionContext;
-    OperatorFactory operatorFactory;
+    private BufferedReader reader;
+    private String sourceName = "System.in";
+    final private ExecutionContext executionContext = new ExecutionContext();
+    ;
+    final private OperatorFactory operatorFactory = new OperatorFactory();
 
-    StackCalculator() throws IOException, ClassNotFoundException {
-        operatorFactory = new OperatorFactory();
-        executionContext = new ExecutionContext();
+    StackCalculator() {
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
-    public StackCalculator(String fileName) throws IOException, ClassNotFoundException {
-        operatorFactory = new OperatorFactory();
-        executionContext = new ExecutionContext();
-        reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(StackCalculator.
-                class.getResourceAsStream(fileName))));
+
+    public StackCalculator(String fileName) {
+        try {
+            reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(StackCalculator.
+                    class.getResourceAsStream(fileName))));
+        } catch (Exception e) {
+            System.err.println("Can't find source file " + fileName);
+            System.exit(1);
+        }
+        sourceName = fileName;
     }
 
-    public void run() throws IOException, InstantiationException, IllegalAccessException,
-            InvocationTargetException, NoSuchMethodException {
+    public void run() {
         String string;
-        while ((string = reader.readLine()) != null) {
-            String [] inputData = string.split(" ");
-            Operator operator = operatorFactory.createOperation(inputData[0]);
-            executionContext.setInputData(inputData);
-            operator.execute(executionContext);
+        int line = 0;
+        try {
+            while ((string = reader.readLine()) != null) {
+                try {
+                    line++;
+                    String[] inputData = string.split(" ");
+                    Operator operator = operatorFactory.createOperation(inputData[0]);
+                    executionContext.setInputData(inputData);
+                    operator.execute(executionContext);
+                } catch (Exception e) {
+                    System.err.println("Error input in " + line + " line of " + sourceName);
+                    System.err.println(e.getMessage());
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Can't read file " + sourceName);
         }
     }
 }
