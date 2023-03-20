@@ -1,14 +1,13 @@
 package ru.nsu.ccfit.haskov.executionContext;
 
 import ru.nsu.ccfit.haskov.stackCalculatorException.StackException;
-import ru.nsu.ccfit.haskov.stackCalculatorException.VariableListException;
 
 import java.util.*;
 
 public class ExecutionContext {
-    Map<String, Double> map;
-    Stack<Double> stack;
-    String[] inputData;
+    private final Map<String, Double> map;
+    private final Stack<Double> stack;
+    private String[] inputData;
 
     public ExecutionContext() {
         map = new HashMap<>();
@@ -22,7 +21,7 @@ public class ExecutionContext {
         stack.add(number);
     }
 
-    public double popFromStack() {
+    public Double popFromStack() {
         try {
             return stack.pop();
         }
@@ -31,14 +30,8 @@ public class ExecutionContext {
         }
     }
 
-    public double getFromList(String string) {
-        Double result = map.get(Objects.requireNonNull(string));
-        if (Objects.nonNull(result)) {
-            return result;
-        }
-        else {
-            throw new VariableListException("Cannot find variable '" + string + "' in variable list.");
-        }
+    public Double getFromList(String string) {
+        return map.get(string);
     }
 
     public void setInputData(String [] inputData) {

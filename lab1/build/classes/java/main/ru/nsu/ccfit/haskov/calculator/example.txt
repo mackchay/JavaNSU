@@ -1,5 +1,7 @@
 # solving programming
 DEFINE a 4
-PUSH ab
-SQRT
+PUSH 2
+PUSH a
+/
+jjj
 PRINT
