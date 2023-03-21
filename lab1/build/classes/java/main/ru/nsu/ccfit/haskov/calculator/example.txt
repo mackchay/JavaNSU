@@ -1,0 +1,7 @@
+# solving programming
+DEFINE a 4
+PUSH 2
+PUSH a
+/
+jjj
+PRINT

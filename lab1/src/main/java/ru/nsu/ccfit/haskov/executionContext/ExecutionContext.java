@@ -1,13 +1,13 @@
 package ru.nsu.ccfit.haskov.executionContext;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import ru.nsu.ccfit.haskov.stackCalculatorException.StackException;
+
+import java.util.*;
 
 public class ExecutionContext {
-    Map<String, Double> map;
-    Stack<Double> stack;
-    String [] inputData;
+    private final Map<String, Double> map;
+    private final Stack<Double> stack;
+    private String[] inputData;
 
     public ExecutionContext() {
         map = new HashMap<>();
@@ -21,11 +21,16 @@ public class ExecutionContext {
         stack.add(number);
     }
 
-    public double popFromStack() {
-        return stack.pop();
+    public Double popFromStack() {
+        try {
+            return stack.pop();
+        }
+        catch (EmptyStackException e) {
+            throw new StackException("Operation stack is empty");
+        }
     }
 
-    public double getFromList(String string) {
+    public Double getFromList(String string) {
         return map.get(string);
     }
 
