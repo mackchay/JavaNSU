@@ -10,10 +10,11 @@ import java.util.Map;
 import java.util.Objects;
 
 public class OperatorFactory {
-    Map<String, Class<?>> operatorMap = new HashMap<>();
-    String filename = "factoryConfig.txt";
+
+    private final Map<String, Class<?>> operatorMap = new HashMap<>();
 
     public OperatorFactory() {
+        String filename = "factoryConfig.txt";
         try {
             InputStream inputStream = OperatorFactory.class.getResourceAsStream(filename);
             BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(inputStream)));

@@ -9,7 +9,7 @@ public class Div implements Operator {
         Double num1 = executionContext.popFromStack();
         Double num2 = executionContext.popFromStack();
         if (num2.equals(0.0)) {
-            throw new DivisionZeroException("Division on zero.");
+            throw new DivisionZeroException();
         }
         Double result = num1 / num2;
         executionContext.pushInStack(result);
