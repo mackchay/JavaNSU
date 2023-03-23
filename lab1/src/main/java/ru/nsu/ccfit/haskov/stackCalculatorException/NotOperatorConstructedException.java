@@ -1,10 +1,8 @@
 package ru.nsu.ccfit.haskov.stackCalculatorException;
 
-import ru.nsu.ccfit.haskov.stackCalculatorException.StackCalculatorException;
-
 public class NotOperatorConstructedException extends StackCalculatorException {
     public NotOperatorConstructedException() {
-        super();
+        super("Class is not Operator.");
     }
     public NotOperatorConstructedException(String message) {
         super(message);

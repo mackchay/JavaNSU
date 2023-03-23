@@ -1,6 +1,6 @@
 package ru.nsu.ccfit.haskov.executionContext;
 
-import ru.nsu.ccfit.haskov.stackCalculatorException.StackException;
+import ru.nsu.ccfit.haskov.stackCalculatorException.StackPopException;
 
 import java.util.*;
 
@@ -26,7 +26,7 @@ public class ExecutionContext {
             return stack.pop();
         }
         catch (EmptyStackException e) {
-            throw new StackException("Operation stack is empty");
+            throw new StackPopException("Operation stack is empty");
         }
     }
 

@@ -7,7 +7,7 @@ import ru.nsu.ccfit.haskov.executionContext.ExecutionContext;
 import ru.nsu.ccfit.haskov.operators.operations.*;
 import ru.nsu.ccfit.haskov.stackCalculatorException.DivisionZeroException;
 import ru.nsu.ccfit.haskov.stackCalculatorException.SqrtException;
-import ru.nsu.ccfit.haskov.stackCalculatorException.StackException;
+import ru.nsu.ccfit.haskov.stackCalculatorException.StackPopException;
 
 import java.io.PrintStream;
 
@@ -146,7 +146,7 @@ public class TestOperation {
     @Test
     public void testPopException() {
         Pop pop = new Pop();
-        final Exception e = assertThrows(StackException.class, ()
+        final Exception e = assertThrows(StackPopException.class, ()
                 -> pop.execute(executionContext));
         assertThat(e.getMessage(), containsString("Operation stack is empty"));
     }

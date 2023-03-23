@@ -1,7 +1,7 @@
 # solving programming
-DEFINE a 4
-PUSH 2
+DEFINE b 500050005
+DEFINE a 400000001
+PUSH b
 PUSH a
-/
-jjj
+*
 PRINT
