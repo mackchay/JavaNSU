@@ -1,302 +1,318 @@
-2023-03-26 15:21:28.562 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 15:21:28.571 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 15:21:28.571 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 15:21:28.572 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:21:28.572 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
-2023-03-26 15:21:28.573 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
-2023-03-26 15:21:28.573 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
-2023-03-26 15:21:28.573 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:21:28.574 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:21:28.574 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:21:28.575 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:21:28.575 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:21:28.575 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:21:28.576 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:21:28.576 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:21:28.576 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:21:28.576 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:21:28.577 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:21:28.577 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:21:28.577 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:21:28.578 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:21:28.578 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:21:28.578 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:21:28.578 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:21:28.578 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
-2023-03-26 15:21:28.579 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
-2023-03-26 15:21:28.579 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
-2023-03-26 15:21:28.579 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:21:28.579 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 15:21:28.580 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 15:21:28.580 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 15:21:28.580 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 15:27:23.859 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 15:27:23.863 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 15:27:24.938 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 15:27:24.938 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:24.939 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:27:24.939 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:27:24.940 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:27:24.940 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:24.941 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:27:24.941 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:27:24.941 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:27:24.942 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:24.942 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
-2023-03-26 15:27:24.943 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
-2023-03-26 15:27:24.943 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
-2023-03-26 15:27:24.943 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:24.944 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 15:27:24.944 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 15:27:25.024 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 15:27:25.024 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 15:27:44.679 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 15:27:44.682 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 15:27:45.695 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 15:27:45.696 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:45.697 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:27:45.697 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:27:45.697 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:27:45.698 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:45.698 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:27:45.698 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:27:45.699 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:27:45.699 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:45.699 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
-2023-03-26 15:27:45.700 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
-2023-03-26 15:27:45.700 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
-2023-03-26 15:27:45.700 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:27:45.701 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 15:27:45.701 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 15:27:45.781 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 15:27:45.781 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 15:30:15.121 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 15:30:15.124 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 15:30:16.198 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 15:30:16.198 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:30:16.199 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:30:16.200 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:30:16.200 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:30:16.201 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:30:16.201 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:30:16.201 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:30:16.202 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:30:16.202 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:30:16.202 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
-2023-03-26 15:30:16.203 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
-2023-03-26 15:30:16.203 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
-2023-03-26 15:30:16.203 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:30:16.204 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 15:30:16.204 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 15:30:16.289 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 15:30:16.289 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 15:31:45.969 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 15:31:45.971 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 15:31:45.971 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 15:31:45.971 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:31:45.972 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
-2023-03-26 15:31:45.972 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
-2023-03-26 15:31:45.972 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
-2023-03-26 15:31:45.972 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:31:45.973 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:31:45.973 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:31:45.973 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:31:45.974 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:31:45.974 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:31:45.974 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:31:45.974 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:31:45.974 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:31:45.975 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:31:45.975 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:31:45.975 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:31:45.975 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:31:45.975 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:31:45.975 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:31:45.976 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:31:45.976 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:31:45.976 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
-2023-03-26 15:31:45.976 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
-2023-03-26 15:31:45.977 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
-2023-03-26 15:31:45.977 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:31:45.977 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 15:31:45.977 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 15:31:45.978 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 15:31:45.978 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 15:34:16.324 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 15:34:16.325 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 15:34:16.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 15:34:16.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:34:16.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
-2023-03-26 15:34:16.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
-2023-03-26 15:34:16.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
-2023-03-26 15:34:16.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:34:16.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:34:16.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:34:16.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:34:16.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:34:16.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
-2023-03-26 15:34:16.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:34:16.330 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 15:34:16.330 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 15:34:16.330 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 15:34:16.330 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 15:40:00.783 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 15:40:00.785 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:00.785 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:20.446 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:20.447 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class 'f' is not Operator.
-2023-03-26 15:40:21.446 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:21.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:23.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:23.447 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:24.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:24.447 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:25.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:25.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:26.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:26.447 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:27.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:27.447 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:29.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:29.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class 'q' is not Operator.
-2023-03-26 15:40:31.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:31.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:32.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:32.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:32.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:32.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:33.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:33.449 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:33.450 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:33.450 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:33.451 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:33.451 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:33.452 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:33.453 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:33.453 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:33.454 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:34.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:34.449 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:34.451 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:34.452 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:34.453 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:34.453 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:34.454 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:34.455 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:34.456 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:34.457 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:35.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:35.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:36.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:36.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:37.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:37.448 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:37.449 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:37.449 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:38.449 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:38.450 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:39.449 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:39.450 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:40.449 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:40.450 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:41.449 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:41.450 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:42.450 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:42.451 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:43.449 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:43.450 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:44.450 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:44.451 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:45.450 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:45.451 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:45.452 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:45.452 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:46.450 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 15:40:46.450 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:104)] - Class '' is not Operator.
-2023-03-26 15:40:56.719 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 16:02:04.321 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 16:02:04.324 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 16:02:04.324 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 16:02:04.324 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 16:02:04.325 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
-2023-03-26 16:02:04.325 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
-2023-03-26 16:02:04.325 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
-2023-03-26 16:02:04.325 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 16:02:04.325 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 16:02:04.325 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 16:02:04.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 16:02:04.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 16:02:04.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 16:02:04.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 16:02:04.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 16:02:04.326 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 16:02:04.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 16:02:04.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 16:02:04.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 16:02:04.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 16:02:04.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 16:02:04.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 16:02:04.327 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 16:02:04.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 16:02:04.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
-2023-03-26 16:02:04.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
-2023-03-26 16:02:04.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
-2023-03-26 16:02:04.328 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:64)] - Getting operator from file...
-2023-03-26 16:02:04.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 16:02:04.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 16:02:04.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 16:02:04.329 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:115)] - Function 'run' ran successfully.
-2023-03-26 16:05:35.831 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
-2023-03-26 16:05:35.832 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
-2023-03-26 16:05:35.832 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 16:05:35.832 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:05:35.833 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
-2023-03-26 16:05:35.833 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
-2023-03-26 16:05:35.833 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
-2023-03-26 16:05:35.833 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:05:35.833 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 16:05:35.833 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 16:05:35.834 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 16:05:35.834 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:05:35.834 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
-2023-03-26 16:05:35.834 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
-2023-03-26 16:05:35.834 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
-2023-03-26 16:05:35.834 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:05:35.834 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:05:35.835 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
-2023-03-26 16:05:35.836 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
-2023-03-26 16:05:35.836 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
-2023-03-26 16:05:35.836 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:05:35.836 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
-2023-03-26 16:05:35.836 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
-2023-03-26 16:05:35.836 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
-2023-03-26 16:05:35.837 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
-2023-03-26 16:05:56.539 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 16:06:01.128 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
-2023-03-26 16:06:03.864 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
-2023-03-26 16:06:06.492 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:06:06.494 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:107)] - Class 'j' is not Operator.
-2023-03-26 16:06:10.493 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
-2023-03-26 16:06:10.494 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:107)] - Class 'jade' is not Operator.
-2023-03-26 16:06:14.493 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:17:59.207 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:17:59.218 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:18:00.332 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:18:00.332 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:18:00.333 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:18:00.334 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:18:00.334 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:18:00.335 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:18:00.335 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:18:00.336 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:18:00.336 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:18:00.336 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:18:00.337 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:18:00.337 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:18:00.337 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:18:00.338 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:18:00.338 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:18:00.339 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:18:00.405 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:18:00.405 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:24:53.047 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:24:53.050 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:24:54.097 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:24:54.098 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:24:54.098 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:24:54.098 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:24:54.099 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:24:54.099 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:24:54.099 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:24:54.099 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:24:54.100 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:24:54.100 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:24:54.100 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:24:54.100 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:24:54.101 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:24:54.101 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:24:54.101 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:24:54.101 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:24:54.184 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:24:54.184 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:25:41.000 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:25:41.004 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:25:42.112 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:25:42.112 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:42.113 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:25:42.113 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:25:42.113 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:25:42.114 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:42.114 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:25:42.114 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:25:42.114 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:25:42.115 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:42.115 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:25:42.115 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:25:42.115 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:25:42.116 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:42.116 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:25:42.116 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:25:42.183 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:25:42.184 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:25:55.068 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:25:55.073 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:25:56.233 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:25:56.233 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:56.234 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:25:56.235 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:25:56.235 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:25:56.236 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:56.236 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:25:56.237 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:25:56.237 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:25:56.237 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:56.238 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:25:56.238 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:25:56.238 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:25:56.239 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:25:56.239 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:25:56.240 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:25:56.328 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:25:56.328 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:29:31.132 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:29:31.137 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:29:32.229 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:29:32.229 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:29:32.230 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:29:32.230 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:29:32.230 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:29:32.231 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:29:32.231 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:29:32.231 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:29:32.231 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:29:32.231 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:29:32.232 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:29:32.232 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:29:32.232 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:29:32.232 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:29:32.232 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:29:32.233 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:29:32.277 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:29:32.278 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:30:27.270 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:30:27.274 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:30:28.554 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:30:28.554 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:30:28.555 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:30:28.555 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:30:28.556 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:30:28.556 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:30:28.557 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:30:28.557 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:30:28.557 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:30:28.557 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:30:28.558 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:30:28.558 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:30:28.558 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:30:28.559 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:30:28.559 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:30:28.559 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:30:28.625 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:30:28.626 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:32:54.222 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:32:54.225 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:32:55.250 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:32:55.251 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:32:55.251 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:32:55.252 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:32:55.252 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:32:55.252 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:32:55.252 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:32:55.253 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:32:55.253 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:32:55.253 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:32:55.253 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:32:55.254 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:32:55.254 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:32:55.254 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:32:55.254 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:32:55.255 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:32:55.322 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:32:55.323 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:33:03.708 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:33:03.714 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:33:05.296 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:33:05.296 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:33:05.297 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:33:05.297 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:33:05.297 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:33:05.297 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:33:05.298 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:33:05.298 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:33:05.298 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:33:05.298 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:33:05.299 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt was created.
+2023-03-27 00:33:05.299 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Sqrt
+2023-03-27 00:33:05.299 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Sqrt ran successfully.
+2023-03-27 00:33:05.299 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:33:05.300 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:33:05.300 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:33:05.362 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:33:05.362 INFO [Test worker] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:37:03.076 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:37:03.078 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:37:03.078 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:37:03.078 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:03.078 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
+2023-03-27 00:37:03.079 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
+2023-03-27 00:37:03.079 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
+2023-03-27 00:37:03.079 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:03.079 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:03.079 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:03.080 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:03.080 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:03.080 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:03.080 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:03.080 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:03.081 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:03.081 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:03.081 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:03.081 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:03.081 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:03.082 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:03.082 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:03.082 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:03.082 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:03.082 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
+2023-03-27 00:37:03.082 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
+2023-03-27 00:37:03.083 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
+2023-03-27 00:37:03.083 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:03.083 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:37:03.083 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:37:03.083 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:37:03.083 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:37:09.522 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:37:09.524 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:37:09.524 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:37:09.524 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:09.525 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
+2023-03-27 00:37:09.525 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
+2023-03-27 00:37:09.525 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
+2023-03-27 00:37:09.526 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:09.526 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:09.526 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:09.527 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:09.527 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:09.527 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:09.528 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:09.528 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:09.528 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:09.528 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:09.529 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:09.529 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:09.529 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:09.529 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:09.530 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:09.530 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:09.530 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:09.531 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
+2023-03-27 00:37:09.531 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
+2023-03-27 00:37:09.531 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
+2023-03-27 00:37:09.531 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:09.532 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:37:09.532 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:37:09.532 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:37:09.532 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:37:21.441 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:37:21.443 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:37:21.443 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:37:21.444 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:21.444 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
+2023-03-27 00:37:21.444 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
+2023-03-27 00:37:21.444 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
+2023-03-27 00:37:21.444 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:21.445 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:21.445 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:21.445 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:21.446 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:21.446 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:21.446 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:21.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:21.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:21.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:21.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:21.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:21.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:21.447 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:21.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:21.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:21.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:21.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
+2023-03-27 00:37:21.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
+2023-03-27 00:37:21.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
+2023-03-27 00:37:21.448 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:37:26.503 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:37:26.505 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:37:26.505 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:37:26.505 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:26.505 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
+2023-03-27 00:37:26.506 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
+2023-03-27 00:37:26.506 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
+2023-03-27 00:37:26.506 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:26.506 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:26.506 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:26.507 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:26.507 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:26.507 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:26.507 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:26.507 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:26.508 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:26.509 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
+2023-03-27 00:37:26.509 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
+2023-03-27 00:37:26.509 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
+2023-03-27 00:37:26.509 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:26.509 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:37:26.509 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:37:26.510 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:37:26.510 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
+2023-03-27 00:37:36.488 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:40)] - Initializing reader...
+2023-03-27 00:37:36.489 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.<init>(StackCalculator.java:43)] - Initializing done.
+2023-03-27 00:37:36.490 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:53)] - Function 'run' was called.
+2023-03-27 00:37:36.490 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.490 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Comment was created.
+2023-03-27 00:37:36.490 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Comment
+2023-03-27 00:37:36.491 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Comment ran successfully.
+2023-03-27 00:37:36.491 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.491 WARN [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:107)] - Class 'ss' is not Operator.
+2023-03-27 00:37:36.495 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.495 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:36.495 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:36.496 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:36.496 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.496 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Define was created.
+2023-03-27 00:37:36.497 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Define
+2023-03-27 00:37:36.497 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Define ran successfully.
+2023-03-27 00:37:36.497 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.497 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:36.498 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:36.498 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:36.498 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.498 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Push was created.
+2023-03-27 00:37:36.498 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Push
+2023-03-27 00:37:36.499 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Push ran successfully.
+2023-03-27 00:37:36.499 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.499 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Mul was created.
+2023-03-27 00:37:36.500 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Mul
+2023-03-27 00:37:36.500 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Mul ran successfully.
+2023-03-27 00:37:36.500 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:67)] - Getting operator from file...
+2023-03-27 00:37:36.500 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:70)] - ru.nsu.ccfit.haskov.operators.operations.Print was created.
+2023-03-27 00:37:36.501 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:73)] - Setting inputData in ru.nsu.ccfit.haskov.operators.operations.Print
+2023-03-27 00:37:36.501 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:76)] - ru.nsu.ccfit.haskov.operators.operations.Print ran successfully.
+2023-03-27 00:37:36.501 INFO [main] [ru.nsu.ccfit.haskov.calculator.StackCalculator.run(StackCalculator.java:118)] - Function 'run' ran successfully.
