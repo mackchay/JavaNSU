@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.Objects;
 
 
@@ -55,15 +56,23 @@ public class StackCalculator {
         try {
             while ((string = reader.readLine()) != null) {
                 String[] inputData = new String[0];
+                String[] commandArgs;
+                if (string.equals("")) {
+                    break;
+                }
                 try {
                     line++;
                     inputData = string.split(" ");
+                    commandArgs = Arrays.copyOfRange(inputData, 1, inputData.length);
                     log.info("Getting operator from file...");
                     Operator operator = operatorFactory.createOperation(inputData[0]);
+
                     log.info(operator.getClass().getName() + " was created.");
-                    executionContext.setInputData(inputData);
+                    executionContext.setInputData(commandArgs);
+
                     log.info("Setting inputData in " + operator.getClass().getName());
                     operator.execute(executionContext);
+
                     log.info(operator.getClass().getName() + " ran successfully.");
                 } catch (StackCalculatorException e) {
                     log.warn(e.getMessage());

@@ -9,11 +9,11 @@ public class Define implements Operator {
     public void execute(ExecutionContext executionContext) {
         String[] data = executionContext.getInputData();
         try {
-            Double.parseDouble(data[1]);
-            throw new DefineFailException("Incorrect format of variable name '" + data[1] + "'.");
+            Double.parseDouble(data[0]);
+            throw new DefineFailException();
         }
         catch (NumberFormatException e) {
-            executionContext.addToList(data[1], Double.parseDouble(data[2]));
+            executionContext.addToList(data[0], Double.parseDouble(data[1]));
         }
     }
 }
