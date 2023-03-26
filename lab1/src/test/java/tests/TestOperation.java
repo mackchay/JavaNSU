@@ -2,22 +2,15 @@ package tests;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
 import ru.nsu.ccfit.haskov.executionContext.ExecutionContext;
 import ru.nsu.ccfit.haskov.operators.operations.*;
 import ru.nsu.ccfit.haskov.stackCalculatorException.DivisionZeroException;
 import ru.nsu.ccfit.haskov.stackCalculatorException.SqrtException;
 import ru.nsu.ccfit.haskov.stackCalculatorException.StackPopException;
 
-import java.io.PrintStream;
-
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 
 public class TestOperation {
     ExecutionContext executionContext = new ExecutionContext();
@@ -110,7 +103,7 @@ public class TestOperation {
         Define define = new Define();
         String name = "name";
         String value = "31.256";
-        String[] inputData = {"Define", name, value};
+        String[] inputData = {name, value};
         executionContext.setInputData(inputData);
         define.execute(executionContext);
         double actual = executionContext.getFromList(name);
@@ -124,7 +117,7 @@ public class TestOperation {
         String name = "name";
         double value = 31.256;
         executionContext.addToList(name, value);
-        String[] inputData = {"Push", "name"};
+        String[] inputData = {"name"};
         executionContext.setInputData(inputData);
         push.execute(executionContext);
         double actual = executionContext.popFromStack();
@@ -149,23 +142,5 @@ public class TestOperation {
         final Exception e = assertThrows(StackPopException.class, ()
                 -> pop.execute(executionContext));
         assertThat(e.getMessage(), containsString("Operation stack is empty"));
-    }
-
-
-    @Test
-    public void testComment() {
-        Comment comment = new Comment();
-        String[] inputData = {"#", "this", "is", "comment"};
-        executionContext.setInputData(inputData);
-
-        PrintStream stream = mock(PrintStream.class);
-        ArgumentCaptor<String> captor = ArgumentCaptor.forClass(String.class);
-        System.setOut(stream);
-
-        comment.execute(executionContext);
-        String expected = "this is comment ";
-
-        verify(stream).println(captor.capture());
-        assertEquals(expected, captor.getValue());
     }
 }

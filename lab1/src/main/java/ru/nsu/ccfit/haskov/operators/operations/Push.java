@@ -9,7 +9,7 @@ public class Push implements Operator {
 
     @Override
     public void execute(ExecutionContext executionContext) {
-        String var = executionContext.getInputData()[1];
+        String var = executionContext.getInputData()[0];
         Double number = executionContext.getFromList(var);
         if (Objects.isNull(number)) {
             executionContext.pushInStack(Double.parseDouble(var));
