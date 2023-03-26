@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.nsu.ccfit.haskov.executionContext.ExecutionContext;
 import ru.nsu.ccfit.haskov.operators.operations.*;
+import ru.nsu.ccfit.haskov.stackCalculatorException.DefineFailException;
 import ru.nsu.ccfit.haskov.stackCalculatorException.DivisionZeroException;
 import ru.nsu.ccfit.haskov.stackCalculatorException.SqrtException;
 import ru.nsu.ccfit.haskov.stackCalculatorException.StackPopException;
@@ -109,6 +110,15 @@ public class TestOperation {
         double actual = executionContext.getFromList(name);
         double expected = 31.256;
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDefineException() {
+        Define define = new Define();
+        executionContext.setInputData(new String[]{"4", "a"});
+        final Exception e = assertThrows(DefineFailException.class, ()
+                -> define.execute(executionContext));
+        assertThat(e.getMessage(), containsString("Failed define operation"));
     }
 
     @Test
