@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StackCalculator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab1</a> &gt; <a href="index.source.html" class="el_package">ru.nsu.ccfit.haskov.calculator</a> &gt; <span class="el_source">StackCalculator.java</span></div><h1>StackCalculator.java</h1><pre class="source lang-java linenums">package ru.nsu.ccfit.haskov.calculator;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import ru.nsu.ccfit.haskov.executionContext.ExecutionContext;
+import ru.nsu.ccfit.haskov.operators.operator.Operator;
+import ru.nsu.ccfit.haskov.operators.operator.OperatorFactory;
+import ru.nsu.ccfit.haskov.stackCalculatorException.StackCalculatorException;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+import java.util.Objects;
+
+
+public class StackCalculator {
+
+
+<span class="fc" id="L21">    private final static Logger log = LogManager.getLogger(StackCalculator.class.getName());</span>
+    private BufferedReader reader;
+<span class="pc" id="L23">    private String sourceName = &quot;System.in&quot;;</span>
+<span class="pc" id="L24">    final private ExecutionContext executionContext = new ExecutionContext();</span>
+<span class="pc" id="L25">    final private OperatorFactory operatorFactory = new OperatorFactory();</span>
+
+    private void errorInLine(int line) {
+<span class="nc" id="L28">        System.err.println(&quot;Error input in &quot; + line + &quot; line of &quot; + sourceName);</span>
+<span class="nc" id="L29">    }</span>
+
+    //If we didn't get any String, StackCalculator read from System.in
+<span class="nc" id="L32">    public StackCalculator() {</span>
+<span class="nc" id="L33">        reader = new BufferedReader(new InputStreamReader(System.in));</span>
+<span class="nc" id="L34">    }</span>
+
+<span class="fc" id="L36">    public StackCalculator(String fileName) {</span>
+        try {
+<span class="fc" id="L38">            log.info(&quot;Initializing reader...&quot;);</span>
+<span class="fc" id="L39">            reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(StackCalculator.</span>
+<span class="fc" id="L40">                    class.getResourceAsStream(fileName))));</span>
+<span class="fc" id="L41">            log.info(&quot;Initializing done.&quot;);</span>
+<span class="nc" id="L42">        } catch (NullPointerException e) {</span>
+<span class="nc" id="L43">            log.info(&quot;Can't initialize reader. Can't find source file &quot; + fileName);</span>
+<span class="nc" id="L44">            System.err.println(&quot;Can't find source file &quot; + fileName);</span>
+<span class="nc" id="L45">            System.exit(1);</span>
+<span class="fc" id="L46">        }</span>
+<span class="fc" id="L47">        sourceName = fileName;</span>
+<span class="fc" id="L48">    }</span>
+
+    public void run() {
+<span class="fc" id="L51">        log.info(&quot;Function 'run' was called.&quot;);</span>
+        String string;
+<span class="fc" id="L53">        int line = 0;</span>
+        try {
+<span class="fc bfc" id="L55" title="All 2 branches covered.">            while ((string = reader.readLine()) != null) {</span>
+<span class="fc" id="L56">                String[] inputData = new String[0];</span>
+                String[] commandArgs;
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">                if (string.equals(&quot;&quot;)) {</span>
+<span class="nc" id="L59">                    break;</span>
+                }
+                try {
+<span class="fc" id="L62">                    line++;</span>
+<span class="fc" id="L63">                    inputData = string.split(&quot; &quot;);</span>
+<span class="fc" id="L64">                    commandArgs = Arrays.copyOfRange(inputData, 1, inputData.length);</span>
+<span class="fc" id="L65">                    log.info(&quot;Getting operator from file...&quot;);</span>
+<span class="fc" id="L66">                    Operator operator = operatorFactory.createOperation(inputData[0]);</span>
+
+<span class="fc" id="L68">                    log.info(operator.getClass().getName() + &quot; was created.&quot;);</span>
+<span class="fc" id="L69">                    executionContext.setInputData(commandArgs);</span>
+
+<span class="fc" id="L71">                    log.info(&quot;Setting inputData in &quot; + operator.getClass().getName());</span>
+<span class="fc" id="L72">                    operator.execute(executionContext);</span>
+
+<span class="fc" id="L74">                    log.info(operator.getClass().getName() + &quot; ran successfully.&quot;);</span>
+<span class="nc" id="L75">                } catch (StackCalculatorException e) {</span>
+<span class="nc" id="L76">                    log.warn(e.getMessage());</span>
+<span class="nc" id="L77">                    errorInLine(line);</span>
+<span class="nc" id="L78">                    System.err.println(e.getMessage());</span>
+<span class="nc" id="L79">                } catch (InstantiationException e) {</span>
+<span class="nc" id="L80">                    log.warn(&quot;Can't construct class (abstract class, interface, primitive type) &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L82">                    errorInLine(line);</span>
+<span class="nc" id="L83">                    System.err.println(&quot;Can't construct class (abstract class, interface, primitive type) &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L85">                } catch (IllegalAccessException e) {</span>
+<span class="nc" id="L86">                    log.warn(&quot;Can't call constructor of class &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L88">                    errorInLine(line);</span>
+<span class="nc" id="L89">                    System.err.println(&quot;Can't call constructor of class &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L91">                } catch (InvocationTargetException e) {</span>
+<span class="nc" id="L92">                    log.warn(&quot;Thrown exception in class &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L94">                    errorInLine(line);</span>
+<span class="nc" id="L95">                    System.err.println(&quot;Thrown exception in class &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L97">                    System.err.println(e.getMessage());</span>
+<span class="nc" id="L98">                } catch (NoSuchMethodException e) {</span>
+<span class="nc" id="L99">                    log.warn(&quot;Constructor of class doesn't exist&quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L101">                    errorInLine(line);</span>
+<span class="nc" id="L102">                    System.err.println(&quot;Constructor of class doesn't exist&quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;'&quot;);
+<span class="nc" id="L104">                } catch (NullPointerException e) {</span>
+<span class="nc" id="L105">                    log.warn(&quot;Class &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;' is not Operator.&quot;);
+<span class="nc" id="L107">                    errorInLine(line);</span>
+<span class="nc" id="L108">                    System.err.println(&quot;Class &quot; +</span>
+                            &quot;'&quot; + inputData[0] + &quot;' is not Operator.&quot;);
+<span class="pc" id="L110">                }</span>
+<span class="fc" id="L111">            }</span>
+<span class="nc" id="L112">        } catch (IOException e) {</span>
+<span class="nc" id="L113">            log.warn(&quot;Can't read file &quot; + sourceName);</span>
+<span class="nc" id="L114">            System.err.println(&quot;Can't read file &quot; + sourceName);</span>
+<span class="fc" id="L115">        }</span>
+<span class="fc" id="L116">        log.info(&quot;Function 'run' ran successfully.&quot;);</span>
+<span class="fc" id="L117">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
