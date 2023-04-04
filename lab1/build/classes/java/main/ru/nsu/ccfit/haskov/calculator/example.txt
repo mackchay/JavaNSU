@@ -1,7 +1,0 @@
-# solving programming
-DEFINE b 500050005
-DEFINE a 400000001
-PUSH b
-PUSH a
-*
-PRINT
