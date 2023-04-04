@@ -1,0 +1,10 @@
+PUSH ru.nsu.ccfit.haskov.operators.operations.Push
+POP ru.nsu.ccfit.haskov.operators.operations.Pop
+DEFINE ru.nsu.ccfit.haskov.operators.operations.Define
++ ru.nsu.ccfit.haskov.operators.operations.Sum
+- ru.nsu.ccfit.haskov.operators.operations.Sub
+* ru.nsu.ccfit.haskov.operators.operations.Mul
+/ ru.nsu.ccfit.haskov.operators.operations.Div
+SQRT ru.nsu.ccfit.haskov.operators.operations.Sqrt
+COMMENT ru.nsu.ccfit.haskov.operators.operations.Comment
+PRINT ru.nsu.ccfit.haskov.operators.operations.Print

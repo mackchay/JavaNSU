@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OperatorFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab1</a> &gt; <a href="index.source.html" class="el_package">ru.nsu.ccfit.haskov.operators.operator</a> &gt; <span class="el_source">OperatorFactory.java</span></div><h1>OperatorFactory.java</h1><pre class="source lang-java linenums">package ru.nsu.ccfit.haskov.operators.operator;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import ru.nsu.ccfit.haskov.calculator.StackCalculator;
+import ru.nsu.ccfit.haskov.stackCalculatorException.NotOperatorConstructedException;
+import ru.nsu.ccfit.haskov.stackCalculatorException.StackCalculatorException;
+
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+public class OperatorFactory {
+
+<span class="fc" id="L17">    private final static Logger log = LogManager.getLogger(StackCalculator.class.getName());</span>
+<span class="fc" id="L18">    private final Map&lt;String, Class&lt;?&gt;&gt; operatorMap = new HashMap&lt;&gt;();</span>
+
+<span class="fc" id="L20">    public OperatorFactory() {</span>
+<span class="fc" id="L21">        String filename = &quot;factoryConfig.txt&quot;;</span>
+<span class="fc" id="L22">        log.info(&quot;Loading resource file for Operator factory...&quot;);</span>
+        try {
+<span class="fc" id="L24">            InputStream inputStream = OperatorFactory.class.getResourceAsStream(filename);</span>
+<span class="fc" id="L25">            BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(inputStream)));</span>
+            String fileData;
+<span class="fc bfc" id="L27" title="All 2 branches covered.">            while ((fileData = reader.readLine()) != null) {</span>
+<span class="fc" id="L28">                log.info(&quot;Start adding operators...&quot;);</span>
+<span class="fc" id="L29">                String[] operatorData = fileData.split(&quot; &quot;);</span>
+<span class="fc" id="L30">                String operatorName = operatorData[0];</span>
+<span class="fc" id="L31">                Class&lt;?&gt; operatorClass = Class.forName(operatorData[1]);</span>
+
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">                if (Operator.class.isAssignableFrom(operatorClass)) {</span>
+<span class="fc" id="L34">                    operatorMap.put(operatorName, operatorClass);</span>
+<span class="fc" id="L35">                    log.info(&quot;Class '&quot; + operatorData[0] + &quot;' added successfully.&quot;);</span>
+                } else {
+<span class="nc" id="L37">                    log.warn(&quot;Class '&quot; + operatorData[0] + &quot;' is not Operator.&quot;);</span>
+<span class="nc" id="L38">                    throw new NotOperatorConstructedException(&quot;Class '&quot; + operatorData[1] +</span>
+                            &quot;' is not extended from 'Operator'.&quot;);
+                }
+<span class="fc" id="L41">            }</span>
+<span class="nc" id="L42">        } catch (IndexOutOfBoundsException e) {</span>
+<span class="nc" id="L43">            System.err.println(&quot;Incorrect input data format. Expected 2 words instead of 1.&quot;);</span>
+<span class="nc" id="L44">        } catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L45">            System.err.println(&quot;Class &quot; + e.getMessage() + &quot; is not found.&quot;);</span>
+<span class="nc" id="L46">        } catch (StackCalculatorException e) {</span>
+<span class="nc" id="L47">            System.err.println(e.getMessage());</span>
+<span class="nc" id="L48">        } catch (IOException e) {</span>
+<span class="nc" id="L49">            System.err.println(&quot;Can't read file &quot; + filename);</span>
+<span class="nc" id="L50">            System.exit(1);</span>
+<span class="nc" id="L51">        } catch (NullPointerException e) {</span>
+<span class="nc" id="L52">            System.err.println(&quot;Can't find operator factory source file&quot;);</span>
+<span class="nc" id="L53">            System.exit(1);</span>
+<span class="pc" id="L54">        }</span>
+<span class="fc" id="L55">    }</span>
+
+    public Operator createOperation(String operatorName) throws InstantiationException, IllegalAccessException,
+            NoSuchMethodException, InvocationTargetException {
+<span class="fc" id="L59">        Class&lt;?&gt; operatorClass = operatorMap.get(operatorName);</span>
+<span class="fc" id="L60">        return (Operator) operatorClass.getConstructor().newInstance();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
