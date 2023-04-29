@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.TestOperation" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-04-04T03:09:16" hostname="egor-ASUS-TUF-Gaming-F15-FX506LH-FX506LH" time="0.046">
+<testsuite name="tests.TestOperation" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-04-07T16:28:21" hostname="egor-ASUS-TUF-Gaming-F15-FX506LH-FX506LH" time="0.073">
   <properties/>
-  <testcase name="testDefineException()" classname="tests.TestOperation" time="0.002"/>
-  <testcase name="testDiv()" classname="tests.TestOperation" time="0.001"/>
+  <testcase name="testDefineException()" classname="tests.TestOperation" time="0.004"/>
+  <testcase name="testDiv()" classname="tests.TestOperation" time="0.004"/>
   <testcase name="testMul()" classname="tests.TestOperation" time="0.002"/>
   <testcase name="testPop()" classname="tests.TestOperation" time="0.002"/>
   <testcase name="testSub()" classname="tests.TestOperation" time="0.002"/>
@@ -10,9 +10,9 @@
   <testcase name="testDivException()" classname="tests.TestOperation" time="0.003"/>
   <testcase name="testPush()" classname="tests.TestOperation" time="0.001"/>
   <testcase name="testSqrt()" classname="tests.TestOperation" time="0.001"/>
-  <testcase name="testSqrtException()" classname="tests.TestOperation" time="0.005"/>
+  <testcase name="testSqrtException()" classname="tests.TestOperation" time="0.013"/>
   <testcase name="testPopException()" classname="tests.TestOperation" time="0.003"/>
-  <testcase name="testDefine()" classname="tests.TestOperation" time="0.002"/>
+  <testcase name="testDefine()" classname="tests.TestOperation" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
