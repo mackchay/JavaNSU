@@ -2,11 +2,13 @@ package com.example.reversi;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+import java.io.FileInputStream;
 import java.util.Objects;
 
 public class Field {
@@ -29,7 +31,13 @@ public class Field {
                     rectangle.setFill(Color.WHITE);
                 }
                 if ((i == size/2 || i == size/2 + 1) && (j == size/2 || j == size/2 + 1)) {
-                    Image img = new Image(Objects.requireNonNull(Field.class.getResourceAsStream("/images/black_figure.jpeg")));
+                    Image img = new Image(Objects.requireNonNull(Field.class.getResourceAsStream("white_figure.png")));
+                    ImageView imageView = new ImageView(img);
+                    imageView.setLayoutX(i * width);
+                    imageView.setLayoutY(j * height);
+                    imageView.setFitWidth(width);
+                    imageView.setFitHeight(height);
+                    play_field.getChildren().add(imageView);
                 }
                 play_field.getChildren().add(rectangle);
             }
