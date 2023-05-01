@@ -1,30 +1,34 @@
 package ru.nsu.ccfit.haskov.model;
 
+import java.util.Vector;
+
 public class ReversiModel {
     private final Player human;
-    private final Player bot;
-    private final static int empty = 0;
+    private final Bot bot;
     private final FieldModel fieldModel;
 
     public ReversiModel() {
         fieldModel = new FieldModel();
         human = new Player(fieldModel.getColorA());
-        bot = new Player(fieldModel.getColorB());
+        bot = new Bot(fieldModel.getColorB());
     }
 
-    public boolean moveBot(int row, int col) {
-        if (fieldModel.isEmpty(row, col)) {
-            return false;
-        }
-        fieldModel.setField_data(human.getColor(), row, col);
-        return true;
+    public boolean isAvailable(int row, int col) {
+        return fieldModel.isEmpty(row, col);
+    }
+    public Vector<Integer[]> moveBot() {
+        return bot.makeMove(fieldModel);
     }
 
-    public boolean moveHuman(int row, int col) {
-        if (fieldModel.isEmpty(row, col)) {
-            return false;
-        }
-        fieldModel.setField_data(human.getColor(), row, col);
-        return true;
+    public Vector<Integer[]> moveHuman(int row, int col) {
+        return fieldModel.updateFieldData(human.getColor(), row, col);
+    }
+
+    public int getHumanColor() {
+        return human.getColor();
+    }
+
+    public int getBotColor() {
+        return bot.getColor();
     }
 }

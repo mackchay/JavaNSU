@@ -6,7 +6,7 @@ import javafx.scene.image.ImageView;
 
 import java.util.Objects;
 
-public class BlackChip {
+public class BlackChip implements Chip{
     private final ImageView imageView;
 
     public BlackChip(int width, int height) {
@@ -15,6 +15,7 @@ public class BlackChip {
         imageView = new ImageView(img);
         imageView.setFitWidth(width);
         imageView.setFitHeight(height);
+        imageView.setId("ChipImage");
     }
 
     public ImageView getImageView() {

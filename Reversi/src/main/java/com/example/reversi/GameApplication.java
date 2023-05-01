@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import ru.nsu.ccfit.haskov.view.ReversiController;
 
 import java.io.IOException;
 
@@ -13,8 +14,6 @@ public class GameApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-start.fxml"));
         AnchorPane root = fxmlLoader.load();
-        Field field = new Field();
-        root.getChildren().add(field.getPane());
         Scene scene = new Scene(root, 1280, 720);
         stage.setTitle("REVERSI");
         stage.setScene(scene);

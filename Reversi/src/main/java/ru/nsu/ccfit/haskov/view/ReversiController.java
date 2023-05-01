@@ -2,31 +2,27 @@ package ru.nsu.ccfit.haskov.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import ru.nsu.ccfit.haskov.model.ReversiModel;
 import com.example.reversi.Field;
 
+import java.util.Vector;
+
 public class ReversiController {
-    private final static ReversiModel reversiModel = new ReversiModel();
-    private final static Field field = new Field();
+    private ReversiModel reversiModel;
+    private Field reversiView;
     @FXML
-    public AnchorPane main;
+    public GridPane gridPane;
 
-    @FXML
     public void initialize() {
-
+        reversiModel = new ReversiModel();
+        reversiView = new Field(gridPane, this);
     }
     @FXML
     public void putChip(int row, int col) {
-        if (reversiModel.moveHuman(row, col)) {
-            int i = 0, j = 0;
-            field.setBlackChip(row, col);
-            while (!reversiModel.moveBot(row, col) && i < 8 && j < 8) {
-                j++;
-                i++;
-            }
-            field.setWhiteChip(row, col);
+        if (reversiModel.isAvailable(row, col)) {
+            reversiView.updateView(reversiModel.moveHuman(row, col), reversiModel.getHumanColor());
+            reversiView.updateView(reversiModel.moveBot(), reversiModel.getBotColor());
         }
-        main.getChildren().add(field.getPane());
     }
-
 }
