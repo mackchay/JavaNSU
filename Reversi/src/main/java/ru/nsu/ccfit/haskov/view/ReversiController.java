@@ -1,8 +1,10 @@
 package ru.nsu.ccfit.haskov.view;
 
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 import ru.nsu.ccfit.haskov.model.ReversiModel;
 import com.example.reversi.Field;
 
@@ -22,7 +24,11 @@ public class ReversiController {
     public void putChip(int row, int col) {
         if (reversiModel.isAvailable(row, col)) {
             reversiView.updateView(reversiModel.moveHuman(row, col), reversiModel.getHumanColor());
-            reversiView.updateView(reversiModel.moveBot(), reversiModel.getBotColor());
+            PauseTransition delay = new PauseTransition(Duration.seconds(1));
+            delay.setOnFinished( event -> {
+                reversiView.updateView(reversiModel.moveBot(), reversiModel.getBotColor());
+            });
+            delay.play();
         }
     }
 }

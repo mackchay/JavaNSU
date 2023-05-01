@@ -70,7 +70,7 @@ public class FieldModel {
                 r += direction[0];
                 c += direction[1];
             }
-            if (field_data[r][c] == color) {
+            if (r >= 0 && r <= field_size - 1 && c >= 0 && c <= field_size - 1 && field_data[r][c] == color) {
                 for (Integer []vectorElem: changeColorVector) {
                     this.setTile(color, vectorElem[0], vectorElem[1]);
                 }
