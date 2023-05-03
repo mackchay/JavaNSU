@@ -5,8 +5,8 @@ import java.util.Vector;
 
 public class Bot extends Player{
 
-    public Bot(int color) {
-        super(color);
+    public Bot(int color, int score) {
+        super(color, score);
     }
 
     public Vector<Integer[]> makeMove(FieldModel fieldModel) {

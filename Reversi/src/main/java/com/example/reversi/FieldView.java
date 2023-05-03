@@ -2,7 +2,6 @@ package com.example.reversi;
 
 import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.SubScene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -15,7 +14,7 @@ import ru.nsu.ccfit.haskov.view.WhiteChip;
 import java.util.Objects;
 import java.util.Vector;
 
-public class Field {
+public class FieldView {
     private final GridPane play_field;
     ReversiController controller;
     private final static int layoutX = 320;
@@ -24,7 +23,7 @@ public class Field {
     private final static int height = 80;
     private final static int width = 80;
 
-    public Field(GridPane gridPane, ReversiController reversiController) {
+    public FieldView(GridPane gridPane, ReversiController reversiController) {
         controller = reversiController;
         play_field = gridPane;
         for (int i = 0; i < field_size; i++) {
@@ -64,8 +63,8 @@ public class Field {
         return play_field;
     }
 
-    public void updateView(Vector<Integer[]> changeColorVector,
-                            int color) {
+    public void updateFieldView(Vector<Integer[]> changeColorVector,
+                                int color) {
         for (Integer[] changeColorVectorElem: changeColorVector) {
             ImageView imageViewInCell = null;
             for (Node node : play_field.getChildren()) {

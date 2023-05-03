@@ -63,20 +63,22 @@ public class FieldModel {
             int c = col + direction[1];
 
             Vector<Integer[]> changeColorVector = new Vector<>();
-            while (r > 0 && r < field_size - 1 && c > 0 && c < field_size - 1 && field_data[r][c] != color) {
+            while (r >= 0 && r < field_size && c >= 0 && c < field_size && field_data[r][c] != color) {
                 if (!isEmpty(r, c)) {
                     changeColorVector.add(new Integer[]{r, c});
                 }
                 r += direction[0];
                 c += direction[1];
             }
-            if (r >= 0 && r <= field_size - 1 && c >= 0 && c <= field_size - 1 && field_data[r][c] == color) {
+            if (r >= 0 && r < field_size && c >= 0 && c < field_size && field_data[r][c] == color) {
                 for (Integer []vectorElem: changeColorVector) {
                     this.setTile(color, vectorElem[0], vectorElem[1]);
                 }
                 globalChangeColorVector.addAll(changeColorVector);
             }
         }
+
+
         return globalChangeColorVector;
     }
 }
