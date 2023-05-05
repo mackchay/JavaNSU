@@ -91,4 +91,8 @@ public class FieldView {
         }
         play_field.add(chip.getImageView(), row, col);
     }
+
+    public void deleteField() {
+        play_field.getChildren().clear();
+    }
 }

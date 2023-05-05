@@ -6,6 +6,8 @@ public class ReversiModel {
     private final Player human;
     private final static int startScore = 2;
     private final Bot bot;
+
+    private int winner = 0;
     private final FieldModel fieldModel;
 
     public ReversiModel() {
@@ -28,7 +30,21 @@ public class ReversiModel {
         Vector<Integer[]> vector = fieldModel.updateFieldData(human.getColor(), row, col);
         human.setScore(human.getScore() + vector.size());
         bot.setScore(bot.getScore() - vector.size() + 1);
+        setWinner();
         return vector;
+    }
+
+    private void setWinner() {
+        if (human.getScore() > bot.getScore()) {
+            winner = human.getColor();
+        }
+        else {
+            winner = bot.getColor();
+        }
+    }
+
+    public int getWinner() {
+        return winner;
     }
 
     public int getHumanColor() {
@@ -45,5 +61,9 @@ public class ReversiModel {
 
     public int getBotColor() {
         return bot.getColor();
+    }
+
+    public boolean isGameOver() {
+        return (human.getScore() + bot.getScore()) == (fieldModel.getField_size() * fieldModel.getField_size());
     }
 }
