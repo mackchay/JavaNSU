@@ -1,4 +1,4 @@
-package com.example.reversi;
+package ru.nsu.ccfit.haskov.reversi;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

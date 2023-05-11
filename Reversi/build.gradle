@@ -25,8 +25,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-  mainModule = 'com.example.reversi'
-  mainClass = 'com.example.reversi.HelloApplication'
+  mainModule = 'ru.nsu.ccfit.haskov.reversi'
+  mainClass = 'ru.nsu.ccfit.haskov.reversi.HelloApplication'
 }
 
 javafx {

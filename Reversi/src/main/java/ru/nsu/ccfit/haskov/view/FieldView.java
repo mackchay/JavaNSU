@@ -1,4 +1,4 @@
-package com.example.reversi;
+package ru.nsu.ccfit.haskov.view;
 
 import javafx.geometry.Insets;
 import javafx.scene.Node;

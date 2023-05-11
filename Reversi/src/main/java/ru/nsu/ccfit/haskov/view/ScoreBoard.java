@@ -1,8 +1,6 @@
-package com.example.reversi;
+package ru.nsu.ccfit.haskov.view;
 
-import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 
 public class ScoreBoard {
     Text textField;

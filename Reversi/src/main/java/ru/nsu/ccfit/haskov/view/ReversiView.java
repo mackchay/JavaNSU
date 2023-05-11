@@ -1,21 +1,19 @@
-package com.example.reversi;
+package ru.nsu.ccfit.haskov.view;
 
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
-import ru.nsu.ccfit.haskov.view.ReversiController;
 
+import java.util.Objects;
 import java.util.Vector;
 
 public class ReversiView {
-    private final FieldView fieldView;
-    private final ScoreBoard scoreBlack;
-    private final ScoreBoard scoreWhite;
+    private FieldView fieldView;
+    private ScoreBoard scoreBlack;
+    private ScoreBoard scoreWhite;
 
-    private final ResultScreen resultScreen;
-
+    private ResultScreen resultScreen;
+    private final StackPane stackPane;
     private boolean status;
 
     public ReversiView(ReversiController reversiController,
@@ -23,7 +21,18 @@ public class ReversiView {
         fieldView = new FieldView(gridPane, reversiController);
         scoreBlack = new ScoreBoard(textBlack);
         scoreWhite = new ScoreBoard(textWhite);
-        resultScreen = new ResultScreen(stackPane);
+        this.stackPane = stackPane;
+        status = true;
+    }
+
+    public void reset(ReversiController reversiController,
+    GridPane gridPane, Text textBlack, Text textWhite) {
+        if (!Objects.isNull(resultScreen)) {
+            resultScreen.hide();
+        }
+        fieldView = new FieldView(gridPane, reversiController);
+        scoreBlack = new ScoreBoard(textBlack);
+        scoreWhite = new ScoreBoard(textWhite);
         status = true;
     }
 
@@ -54,7 +63,12 @@ public class ReversiView {
     public void showResult(boolean victory) {
         fieldView.deleteField();
         if (victory) {
-            resultScreen.showLose();
+            resultScreen = new WinScreen(stackPane);
+            resultScreen.show();
+        }
+        else {
+            resultScreen = new LoseScreen(stackPane);
+            resultScreen.show();
         }
     }
 }

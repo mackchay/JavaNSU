@@ -1,6 +1,5 @@
 package ru.nsu.ccfit.haskov.view;
 
-import com.example.reversi.FieldView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 

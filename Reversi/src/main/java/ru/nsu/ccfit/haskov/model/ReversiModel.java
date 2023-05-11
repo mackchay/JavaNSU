@@ -23,6 +23,7 @@ public class ReversiModel {
         Vector<Integer[]> vector = bot.makeMove(fieldModel);
         bot.setScore(bot.getScore() + vector.size());
         human.setScore(human.getScore() - vector.size() + 1);
+        setWinner();
         return vector;
     }
 
