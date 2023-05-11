@@ -6,10 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import ru.nsu.ccfit.haskov.view.BlackChip;
-import ru.nsu.ccfit.haskov.view.Chip;
-import ru.nsu.ccfit.haskov.view.ReversiController;
-import ru.nsu.ccfit.haskov.view.WhiteChip;
+import ru.nsu.ccfit.haskov.reversi.ReversiController;
 
 import java.util.Objects;
 import java.util.Vector;

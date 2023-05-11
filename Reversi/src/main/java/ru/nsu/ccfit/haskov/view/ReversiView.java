@@ -3,6 +3,7 @@ package ru.nsu.ccfit.haskov.view;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import ru.nsu.ccfit.haskov.reversi.ReversiController;
 
 import java.util.Objects;
 import java.util.Vector;
