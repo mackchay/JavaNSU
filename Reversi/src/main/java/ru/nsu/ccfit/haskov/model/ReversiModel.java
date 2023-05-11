@@ -1,5 +1,7 @@
 package ru.nsu.ccfit.haskov.model;
 
+import javafx.util.Pair;
+
 import java.util.Vector;
 
 public class ReversiModel {
@@ -16,8 +18,13 @@ public class ReversiModel {
         bot = new Bot(fieldModel.getColorB(), startScore);
     }
 
-    public boolean isAvailable(int row, int col) {
-        return fieldModel.isEmpty(row, col);
+    public boolean isAvailable(int row, int col, int color) {
+
+        return fieldModel.getAvailTiles(color).contains(new Pair<>(row, col));
+    }
+
+    public boolean isAvailableExist(int color) {
+        return fieldModel.getAvailTiles(color).size() > 0;
     }
     public Move moveBot() {
         Move move = bot.makeMove(fieldModel);

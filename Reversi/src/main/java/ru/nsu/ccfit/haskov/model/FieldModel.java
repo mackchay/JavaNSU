@@ -33,6 +33,7 @@ public class FieldModel {
                 }
             }
         }
+        checkAvailableTiles();
     }
 
     int getColorA() {
@@ -86,7 +87,7 @@ public class FieldModel {
         }
 
         Move move = new Move(globalChangeColorVector, new Pair<>(row, col), otherTilesVector);
-
+        checkAvailableTiles();
         return move;
     }
 
@@ -98,7 +99,7 @@ public class FieldModel {
             int c = col + direction[1];
             int enemiesCount = 0;
             while (r >= 0 && r < field_size && c >= 0 && c < field_size &&
-                    field_data[r][c] != empty) {
+                    field_data[r][c] != empty && field_data[r][c] != field_data[row][col]) {
                 if (color != field_data[r][c]) {
                     enemiesCount++;
                 }
@@ -126,5 +127,12 @@ public class FieldModel {
                 }
             }
         }
+    }
+
+    public Vector<Pair<Integer, Integer>> getAvailTiles(int color) {
+        if (color == colorA) {
+            return availATiles;
+        }
+        return availBTiles;
     }
 }

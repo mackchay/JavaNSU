@@ -77,7 +77,8 @@ public class ReversiController {
     }
     @FXML
     public void putChip(int row, int col) {
-        if (reversiModel.isAvailable(row, col) && reversiView.isStatusView()) {
+        if (reversiModel.isAvailable(row, col, reversiModel.getHumanColor()) && reversiView.isStatusView()
+        || !reversiModel.isAvailableExist(reversiModel.getHumanColor())) {
             Move humanMove = reversiModel.moveHuman(row, col);
             reversiView.updateView(humanMove.getPainted(), reversiModel.getHumanColor(),
                     reversiModel.getHumanScore(), reversiModel.getBotScore());
