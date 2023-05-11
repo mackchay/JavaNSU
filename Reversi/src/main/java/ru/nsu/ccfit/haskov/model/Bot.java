@@ -9,7 +9,7 @@ public class Bot extends Player{
         super(color, score);
     }
 
-    public Vector<Integer[]> makeMove(FieldModel fieldModel) {
+    public Move makeMove(FieldModel fieldModel) {
         for (int row = 0; row < fieldModel.getField_size(); row += fieldModel.getField_size() - 1) {
             for (int col = 0; col < fieldModel.getField_size(); col += fieldModel.getField_size() - 1) {
                 if (fieldModel.isEmpty(row, col)) {

@@ -12,6 +12,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ru.nsu.ccfit.haskov.model.Move;
 import ru.nsu.ccfit.haskov.model.ReversiModel;
 import ru.nsu.ccfit.haskov.reversi.GameApplication;
 import ru.nsu.ccfit.haskov.view.ReversiView;
@@ -77,13 +78,13 @@ public class ReversiController {
     @FXML
     public void putChip(int row, int col) {
         if (reversiModel.isAvailable(row, col) && reversiView.isStatusView()) {
-            Vector<Integer[]> vectorHuman = reversiModel.moveHuman(row, col);
-            reversiView.updateView(vectorHuman, reversiModel.getHumanColor(),
+            Move humanMove = reversiModel.moveHuman(row, col);
+            reversiView.updateView(humanMove.getPainted(), reversiModel.getHumanColor(),
                     reversiModel.getHumanScore(), reversiModel.getBotScore());
             PauseTransition delay = new PauseTransition(Duration.seconds(1));
             delay.setOnFinished( event -> {
-                Vector<Integer[]> vectorBot = reversiModel.moveBot();
-                reversiView.updateView(vectorBot, reversiModel.getBotColor(),
+                Move botMove = reversiModel.moveBot();
+                reversiView.updateView(botMove.getPainted(), reversiModel.getBotColor(),
                         reversiModel.getBotScore(), reversiModel.getHumanScore());
                 if (reversiModel.isGameOver()) {
                     reversiView.showResult(reversiModel.getWinner() == reversiModel.getHumanColor());

@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.util.Pair;
 import ru.nsu.ccfit.haskov.reversi.ReversiController;
 
 import java.util.Objects;
@@ -60,13 +61,13 @@ public class FieldView {
         return play_field;
     }
 
-    public void updateFieldView(Vector<Integer[]> changeColorVector,
+    public void updateFieldView(Vector<Pair<Integer, Integer>> changeColorVector,
                                 int color) {
-        for (Integer[] changeColorVectorElem: changeColorVector) {
+        for (Pair<Integer, Integer> changeColorVectorElem: changeColorVector) {
             ImageView imageViewInCell = null;
             for (Node node : play_field.getChildren()) {
-                Integer row = changeColorVectorElem[0];
-                Integer col = changeColorVectorElem[1];
+                Integer row = changeColorVectorElem.getKey();
+                Integer col = changeColorVectorElem.getValue();
                 if (Objects.equals(GridPane.getRowIndex(node), row) &&
                         Objects.equals(GridPane.getColumnIndex(node), col)) {
                     imageViewInCell = (ImageView) node.lookup("ChipImage");

@@ -4,8 +4,8 @@ import java.util.Vector;
 
 public class ReversiModel {
     private final Player human;
-    private final static int startScore = 2;
     private final Bot bot;
+    private final static int startScore = 2;
 
     private int winner = 0;
     private final FieldModel fieldModel;
@@ -19,20 +19,20 @@ public class ReversiModel {
     public boolean isAvailable(int row, int col) {
         return fieldModel.isEmpty(row, col);
     }
-    public Vector<Integer[]> moveBot() {
-        Vector<Integer[]> vector = bot.makeMove(fieldModel);
-        bot.setScore(bot.getScore() + vector.size());
-        human.setScore(human.getScore() - vector.size() + 1);
+    public Move moveBot() {
+        Move move = bot.makeMove(fieldModel);
+        bot.setScore(bot.getScore() + move.getPainted().size());
+        human.setScore(human.getScore() - move.getPainted().size() + 1);
         setWinner();
-        return vector;
+        return move;
     }
 
-    public Vector<Integer[]> moveHuman(int row, int col) {
-        Vector<Integer[]> vector = fieldModel.updateFieldData(human.getColor(), row, col);
-        human.setScore(human.getScore() + vector.size());
-        bot.setScore(bot.getScore() - vector.size() + 1);
+    public Move moveHuman(int row, int col) {
+        Move move = fieldModel.updateFieldData(human.getColor(), row, col);
+        human.setScore(human.getScore() + move.getPainted().size());
+        bot.setScore(bot.getScore() - move.getPainted().size() + 1);
         setWinner();
-        return vector;
+        return move;
     }
 
     private void setWinner() {
