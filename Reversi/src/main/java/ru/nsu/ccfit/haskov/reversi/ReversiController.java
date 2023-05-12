@@ -16,6 +16,7 @@ import ru.nsu.ccfit.haskov.model.Move;
 import ru.nsu.ccfit.haskov.model.ReversiModel;
 import ru.nsu.ccfit.haskov.reversi.GameApplication;
 import ru.nsu.ccfit.haskov.view.ReversiView;
+import ru.nsu.ccfit.haskov.view.Tiles;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -80,12 +81,20 @@ public class ReversiController {
         if (reversiModel.isAvailable(row, col, reversiModel.getHumanColor()) && reversiView.isStatusView()
         || !reversiModel.isAvailableExist(reversiModel.getHumanColor())) {
             Move humanMove = reversiModel.moveHuman(row, col);
-            reversiView.updateView(humanMove.getPainted(), reversiModel.getHumanColor(),
-                    reversiModel.getHumanScore(), reversiModel.getBotScore());
+            Tiles tiles = new Tiles(humanMove.getPainted(),
+                    reversiModel.getAvailableTiles(reversiModel.getHumanColor()),
+                            humanMove.getAddedTile(),
+                            humanMove.getOtherTiles(),
+                            reversiModel.getHumanColor());
+            reversiView.updateView(tiles,
+                    reversiModel.getHumanScore(),
+                    reversiModel.getBotScore());
             PauseTransition delay = new PauseTransition(Duration.seconds(1));
             delay.setOnFinished( event -> {
                 Move botMove = reversiModel.moveBot();
-                reversiView.updateView(botMove.getPainted(), reversiModel.getBotColor(),
+                reversiView.updateView(botMove.getPainted(),
+                        reversiModel.getAvailableTiles(reversiModel.getHumanColor()),
+                        reversiModel.getBotColor(),
                         reversiModel.getBotScore(), reversiModel.getHumanScore());
                 if (reversiModel.isGameOver()) {
                     reversiView.showResult(reversiModel.getWinner() == reversiModel.getHumanColor());

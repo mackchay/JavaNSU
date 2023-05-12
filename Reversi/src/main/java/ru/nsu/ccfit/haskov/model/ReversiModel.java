@@ -19,8 +19,11 @@ public class ReversiModel {
     }
 
     public boolean isAvailable(int row, int col, int color) {
-
         return fieldModel.getAvailTiles(color).contains(new Pair<>(row, col));
+    }
+
+    public Vector<Pair<Integer, Integer>> getAvailableTiles(int color) {
+        return fieldModel.getAvailTiles(color);
     }
 
     public boolean isAvailableExist(int color) {

@@ -39,17 +39,15 @@ public class FieldView {
                 button.setOnAction(event -> controller.putChip(finalI, finalJ));
                 if ((i + j) % 2 == 0) {
                     button.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
-                }
-                else {
+                } else {
                     button.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
                 }
                 StackPane stackPane = new StackPane(button);
                 play_field.add(stackPane, i, j);
-                if ((i == field_size /2 || i == field_size /2 - 1) && (j == field_size /2 || j == field_size /2 - 1)) {
+                if ((i == field_size / 2 || i == field_size / 2 - 1) && (j == field_size / 2 || j == field_size / 2 - 1)) {
                     if (i == j) {
                         play_field.add(new BlackChip(width, height).getImageView(), i, j);
-                    }
-                    else {
+                    } else {
                         play_field.add(new WhiteChip(width, height).getImageView(), i, j);
                     }
                 }
@@ -61,9 +59,8 @@ public class FieldView {
         return play_field;
     }
 
-    public void updateFieldView(Vector<Pair<Integer, Integer>> changeColorVector,
-                                int color) {
-        for (Pair<Integer, Integer> changeColorVectorElem: changeColorVector) {
+    public void updateFieldView(Tiles tiles) {
+        for (Pair<Integer, Integer> changeColorVectorElem : tiles.getChangeColorTiles()) {
             ImageView imageViewInCell = null;
             for (Node node : play_field.getChildren()) {
                 Integer row = changeColorVectorElem.getKey();
@@ -72,7 +69,21 @@ public class FieldView {
                         Objects.equals(GridPane.getColumnIndex(node), col)) {
                     imageViewInCell = (ImageView) node.lookup("ChipImage");
                     play_field.getChildren().remove(imageViewInCell);
-                    this.setChip(color, row, col);
+                    this.setChip(tiles.getColor(), row, col);
+                    break;
+                }
+            }
+        }
+        for (Pair<Integer, Integer> availableTile : tiles.getAvailableTiles()) {
+            ImageView imageViewInCell = null;
+            for (Node node : play_field.getChildren()) {
+                Integer row = availableTile.getKey();
+                Integer col = availableTile.getValue();
+                if (Objects.equals(GridPane.getRowIndex(node), row) &&
+                        Objects.equals(GridPane.getColumnIndex(node), col)) {
+                    imageViewInCell = (ImageView) node.lookup("ChipImage");
+                    play_field.getChildren().remove(imageViewInCell);
+                    this.setAvailable(tiles.getColor(), row, col);
                     break;
                 }
             }
@@ -83,11 +94,15 @@ public class FieldView {
         Chip chip;
         if (color == 1) {
             chip = new BlackChip(width, height);
-        }
-        else {
+        } else {
             chip = new WhiteChip(width, height);
         }
         play_field.add(chip.getImageView(), row, col);
+    }
+
+    private void setAvailable(int color, int row, int col) {
+        AvailableTileView availableTileView = new AvailableTileView(width, height);
+        play_field.add(availableTileView.getImageView(), row, col);
     }
 
     public void deleteField() {

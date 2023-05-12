@@ -38,10 +38,9 @@ public class ReversiView {
         status = true;
     }
 
-    public void updateView(Vector<Pair<Integer, Integer>> changeColorVector,
-                           int color, int thisValue, int otherValue) {
-        fieldView.updateFieldView(changeColorVector, color);
-        if (color == 1) {
+    public void updateView(Tiles tiles, int thisValue, int otherValue) {
+        fieldView.updateFieldView(tiles);
+        if (tiles.getColor() == 1) {
             scoreBlack.setTextField(thisValue);
             scoreWhite.setTextField(otherValue);
         } else {
