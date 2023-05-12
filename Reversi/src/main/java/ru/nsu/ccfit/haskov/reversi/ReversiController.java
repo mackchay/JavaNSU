@@ -1,6 +1,7 @@
-package ru.nsu.ccfit.haskov.view;
+package ru.nsu.ccfit.haskov.reversi;
 
 import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,10 +12,14 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ru.nsu.ccfit.haskov.model.Move;
 import ru.nsu.ccfit.haskov.model.ReversiModel;
 import ru.nsu.ccfit.haskov.reversi.GameApplication;
+import ru.nsu.ccfit.haskov.view.ReversiView;
 
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 import java.util.Vector;
 
 public class ReversiController {
@@ -35,6 +40,7 @@ public class ReversiController {
     private void exit() {
         Stage currentStage = (Stage) exitButton.getScene().getWindow();
         currentStage.close();
+        Platform.exit();
     }
     @FXML
     public void restart() {
@@ -56,6 +62,14 @@ public class ReversiController {
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("about-game.fxml"));
         AnchorPane root = fxmlLoader.load();
         Scene scene = new Scene(root, 720, 720);
+        Text text = (Text) (root.lookup("#aboutBorderPane").lookup("#aboutText"));
+        InputStream inputStream = ReversiController.class.getResourceAsStream("about.txt");
+        assert inputStream != null;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
+        String line;
+        while ((line = bufferedReader.readLine()) != null) {
+            text.setText(text.getText() + '\n' + line);
+        }
         Stage stage = new Stage();
         stage.setTitle("ABOUT");
         stage.setScene(scene);
@@ -63,14 +77,15 @@ public class ReversiController {
     }
     @FXML
     public void putChip(int row, int col) {
-        if (reversiModel.isAvailable(row, col) && reversiView.isStatusView()) {
-            Vector<Integer[]> vectorHuman = reversiModel.moveHuman(row, col);
-            reversiView.updateView(vectorHuman, reversiModel.getHumanColor(),
+        if (reversiModel.isAvailable(row, col, reversiModel.getHumanColor()) && reversiView.isStatusView()
+        || !reversiModel.isAvailableExist(reversiModel.getHumanColor())) {
+            Move humanMove = reversiModel.moveHuman(row, col);
+            reversiView.updateView(humanMove.getPainted(), reversiModel.getHumanColor(),
                     reversiModel.getHumanScore(), reversiModel.getBotScore());
             PauseTransition delay = new PauseTransition(Duration.seconds(1));
             delay.setOnFinished( event -> {
-                Vector<Integer[]> vectorBot = reversiModel.moveBot();
-                reversiView.updateView(vectorBot, reversiModel.getBotColor(),
+                Move botMove = reversiModel.moveBot();
+                reversiView.updateView(botMove.getPainted(), reversiModel.getBotColor(),
                         reversiModel.getBotScore(), reversiModel.getHumanScore());
                 if (reversiModel.isGameOver()) {
                     reversiView.showResult(reversiModel.getWinner() == reversiModel.getHumanColor());

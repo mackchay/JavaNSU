@@ -1,11 +1,13 @@
 package ru.nsu.ccfit.haskov.model;
 
+import javafx.util.Pair;
+
 import java.util.Vector;
 
 public class ReversiModel {
     private final Player human;
-    private final static int startScore = 2;
     private final Bot bot;
+    private final static int startScore = 2;
 
     private int winner = 0;
     private final FieldModel fieldModel;
@@ -16,23 +18,28 @@ public class ReversiModel {
         bot = new Bot(fieldModel.getColorB(), startScore);
     }
 
-    public boolean isAvailable(int row, int col) {
-        return fieldModel.isEmpty(row, col);
-    }
-    public Vector<Integer[]> moveBot() {
-        Vector<Integer[]> vector = bot.makeMove(fieldModel);
-        bot.setScore(bot.getScore() + vector.size());
-        human.setScore(human.getScore() - vector.size() + 1);
-        setWinner();
-        return vector;
+    public boolean isAvailable(int row, int col, int color) {
+
+        return fieldModel.getAvailTiles(color).contains(new Pair<>(row, col));
     }
 
-    public Vector<Integer[]> moveHuman(int row, int col) {
-        Vector<Integer[]> vector = fieldModel.updateFieldData(human.getColor(), row, col);
-        human.setScore(human.getScore() + vector.size());
-        bot.setScore(bot.getScore() - vector.size() + 1);
+    public boolean isAvailableExist(int color) {
+        return fieldModel.getAvailTiles(color).size() > 0;
+    }
+    public Move moveBot() {
+        Move move = bot.makeMove(fieldModel);
+        bot.setScore(bot.getScore() + move.getPainted().size());
+        human.setScore(human.getScore() - move.getPainted().size() + 1);
         setWinner();
-        return vector;
+        return move;
+    }
+
+    public Move moveHuman(int row, int col) {
+        Move move = fieldModel.updateFieldData(human.getColor(), row, col);
+        human.setScore(human.getScore() + move.getPainted().size());
+        bot.setScore(bot.getScore() - move.getPainted().size() + 1);
+        setWinner();
+        return move;
     }
 
     private void setWinner() {

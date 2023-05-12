@@ -3,6 +3,8 @@ package ru.nsu.ccfit.haskov.view;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import javafx.util.Pair;
+import ru.nsu.ccfit.haskov.reversi.ReversiController;
 
 import java.util.Objects;
 import java.util.Vector;
@@ -36,7 +38,7 @@ public class ReversiView {
         status = true;
     }
 
-    public void updateView(Vector<Integer[]> changeColorVector,
+    public void updateView(Vector<Pair<Integer, Integer>> changeColorVector,
                            int color, int thisValue, int otherValue) {
         fieldView.updateFieldView(changeColorVector, color);
         if (color == 1) {
