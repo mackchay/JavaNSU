@@ -16,6 +16,7 @@ public class GameApplication extends Application {
         Scene scene = new Scene(root, 1280, 720);
         stage.setTitle("REVERSI");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

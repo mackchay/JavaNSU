@@ -19,7 +19,10 @@ public class ReversiView {
     private boolean status;
 
     public ReversiView(ReversiController reversiController,
-                       GridPane gridPane, Text textBlack, Text textWhite, StackPane stackPane) {
+                       GridPane gridPane,
+                       Text textBlack,
+                       Text textWhite,
+                       StackPane stackPane) {
         fieldView = new FieldView(gridPane, reversiController);
         scoreBlack = new ScoreBoard(textBlack);
         scoreWhite = new ScoreBoard(textWhite);
@@ -32,16 +35,16 @@ public class ReversiView {
         if (!Objects.isNull(resultScreen)) {
             resultScreen.hide();
         }
+        fieldView.deleteField();
         fieldView = new FieldView(gridPane, reversiController);
         scoreBlack = new ScoreBoard(textBlack);
         scoreWhite = new ScoreBoard(textWhite);
         status = true;
     }
 
-    public void updateView(Vector<Pair<Integer, Integer>> changeColorVector,
-                           int color, int thisValue, int otherValue) {
-        fieldView.updateFieldView(changeColorVector, color);
-        if (color == 1) {
+    public void updateView(Tiles tiles, int thisValue, int otherValue) {
+        fieldView.updateFieldView(tiles);
+        if (tiles.getColor() == 1) {
             scoreBlack.setTextField(thisValue);
             scoreWhite.setTextField(otherValue);
         } else {

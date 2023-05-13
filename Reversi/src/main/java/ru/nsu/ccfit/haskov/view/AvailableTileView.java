@@ -6,18 +6,20 @@ import javafx.util.Pair;
 
 import java.util.Objects;
 
-public class WhiteChip implements Chip{
+public class AvailableTileView {
     private final ImageView imageView;
-    public WhiteChip(int width, int height, Pair<Integer, Integer> coords) {
+
+    public AvailableTileView(int width, int height, Pair<Integer, Integer> coords) {
         Image img;
-        img = new Image(Objects.requireNonNull(FieldView.class.getResourceAsStream("white_chip.png")));
+        img = new Image(Objects.requireNonNull(FieldView.class.getResourceAsStream("green_circle.png")));
         imageView = new ImageView(img);
         imageView.setFitWidth(width);
         imageView.setFitHeight(height);
-        imageView.setId(coords.getKey().toString() + coords.getValue().toString() + "chip");
+        imageView.setId(coords.getKey().toString() + coords.getValue().toString());
     }
 
     public ImageView getImageView() {
         return imageView;
     }
+
 }
