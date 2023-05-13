@@ -81,21 +81,25 @@ public class ReversiController {
         if (reversiModel.isAvailable(row, col, reversiModel.getHumanColor()) && reversiView.isStatusView()
         || !reversiModel.isAvailableExist(reversiModel.getHumanColor())) {
             Move humanMove = reversiModel.moveHuman(row, col);
-            Tiles tiles = new Tiles(humanMove.getPainted(),
-                    reversiModel.getAvailableTiles(reversiModel.getHumanColor()),
+            Tiles humanTiles = new Tiles(humanMove.getPainted(),
+                    reversiModel.getAvailableTiles(reversiModel.getBotColor()),
                             humanMove.getAddedTile(),
                             humanMove.getOtherTiles(),
                             reversiModel.getHumanColor());
-            reversiView.updateView(tiles,
+            reversiView.updateView(humanTiles,
                     reversiModel.getHumanScore(),
                     reversiModel.getBotScore());
             PauseTransition delay = new PauseTransition(Duration.seconds(1));
             delay.setOnFinished( event -> {
                 Move botMove = reversiModel.moveBot();
-                reversiView.updateView(botMove.getPainted(),
+                Tiles botTiles = new Tiles(botMove.getPainted(),
                         reversiModel.getAvailableTiles(reversiModel.getHumanColor()),
-                        reversiModel.getBotColor(),
-                        reversiModel.getBotScore(), reversiModel.getHumanScore());
+                        botMove.getAddedTile(),
+                        botMove.getOtherTiles(),
+                        reversiModel.getBotColor());
+                reversiView.updateView(botTiles,
+                        reversiModel.getBotScore(),
+                        reversiModel.getHumanScore());
                 if (reversiModel.isGameOver()) {
                     reversiView.showResult(reversiModel.getWinner() == reversiModel.getHumanColor());
                 }

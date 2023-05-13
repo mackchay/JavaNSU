@@ -15,8 +15,8 @@ import java.util.Vector;
 public class FieldView {
     private final GridPane play_field;
     ReversiController controller;
-    private final static int layoutX = 320;
-    private final static int layoutY = 35;
+
+    private Tiles tiles;
     private final static int field_size = 8;
     private final static int height = 80;
     private final static int width = 80;
@@ -24,6 +24,7 @@ public class FieldView {
     public FieldView(GridPane gridPane, ReversiController reversiController) {
         controller = reversiController;
         play_field = gridPane;
+        tiles = new Tiles(field_size, field_size);
         for (int i = 0; i < field_size; i++) {
             RowConstraints row = new RowConstraints();
             row.setPrefHeight(height);
@@ -46,66 +47,71 @@ public class FieldView {
                 play_field.add(stackPane, i, j);
                 if ((i == field_size / 2 || i == field_size / 2 - 1) && (j == field_size / 2 || j == field_size / 2 - 1)) {
                     if (i == j) {
-                        play_field.add(new BlackChip(width, height).getImageView(), i, j);
+                        play_field.add(new BlackChip(width, height, new Pair<>(i, j)).getImageView(), i, j);
                     } else {
-                        play_field.add(new WhiteChip(width, height).getImageView(), i, j);
+                        play_field.add(new WhiteChip(width, height, new Pair<>(i, j)).getImageView(), i, j);
                     }
                 }
             }
         }
-    }
-
-    public Pane getPane() {
-        return play_field;
+        for (Pair<Integer, Integer> availableTile : tiles.getAvailableTiles()) {
+            play_field.add(new AvailableTileView(width, height,
+                            new Pair<>(availableTile.getKey(), availableTile.getValue())).getImageView(),
+                    availableTile.getKey(),
+                    availableTile.getValue());
+        }
     }
 
     public void updateFieldView(Tiles tiles) {
-        for (Pair<Integer, Integer> changeColorVectorElem : tiles.getChangeColorTiles()) {
-            ImageView imageViewInCell = null;
-            for (Node node : play_field.getChildren()) {
-                Integer row = changeColorVectorElem.getKey();
-                Integer col = changeColorVectorElem.getValue();
-                if (Objects.equals(GridPane.getRowIndex(node), row) &&
-                        Objects.equals(GridPane.getColumnIndex(node), col)) {
-                    imageViewInCell = (ImageView) node.lookup("ChipImage");
-                    play_field.getChildren().remove(imageViewInCell);
-                    this.setChip(tiles.getColor(), row, col);
-                    break;
-                }
-            }
+        removeAvailable();
+        if (tiles.getColor() == 2) {
+            setAvailable(tiles.getAvailableTiles());
         }
-        for (Pair<Integer, Integer> availableTile : tiles.getAvailableTiles()) {
-            ImageView imageViewInCell = null;
-            for (Node node : play_field.getChildren()) {
-                Integer row = availableTile.getKey();
-                Integer col = availableTile.getValue();
-                if (Objects.equals(GridPane.getRowIndex(node), row) &&
-                        Objects.equals(GridPane.getColumnIndex(node), col)) {
-                    imageViewInCell = (ImageView) node.lookup("ChipImage");
-                    play_field.getChildren().remove(imageViewInCell);
-                    this.setAvailable(tiles.getColor(), row, col);
-                    break;
-                }
-            }
-        }
+        this.tiles = tiles;
+        setChips(tiles);
     }
 
     private void setChip(int color, int row, int col) {
         Chip chip;
         if (color == 1) {
-            chip = new BlackChip(width, height);
+            chip = new BlackChip(width, height, new Pair<>(row, col));
         } else {
-            chip = new WhiteChip(width, height);
+            chip = new WhiteChip(width, height, new Pair<>(row, col));
         }
         play_field.add(chip.getImageView(), row, col);
     }
 
-    private void setAvailable(int color, int row, int col) {
-        AvailableTileView availableTileView = new AvailableTileView(width, height);
-        play_field.add(availableTileView.getImageView(), row, col);
+    private void setAvailable(Vector<Pair<Integer, Integer>> availableTiles) {
+        for (Pair<Integer, Integer> availableTile : availableTiles) {
+            Integer row = availableTile.getKey();
+            Integer col = availableTile.getValue();
+            AvailableTileView availableTileView = new AvailableTileView(width, height, new Pair<>(row, col));
+            play_field.add(availableTileView.getImageView(), row, col);
+        }
+    }
+
+    private void removeAvailable() {
+        for (Pair<Integer, Integer> availableTile : tiles.getAvailableTiles()) {
+            Integer row = availableTile.getKey();
+            Integer col = availableTile.getValue();
+            ImageView imageViewInCell = (ImageView) play_field.lookup("#" + row + col);
+            play_field.getChildren().remove(imageViewInCell);
+        }
+    }
+
+    private void setChips(Tiles tiles) {
+        for (Pair<Integer, Integer> changeColorTiles : tiles.getChangeColorTiles()) {
+            Integer row = changeColorTiles.getKey();
+            Integer col = changeColorTiles.getValue();
+            ImageView imageViewInCell = (ImageView) play_field.lookup("#" + row + col + "chip");
+            play_field.getChildren().remove(imageViewInCell);
+            this.setChip(tiles.getColor(), row, col);
+        }
     }
 
     public void deleteField() {
         play_field.getChildren().clear();
     }
+
+
 }

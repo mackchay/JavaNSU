@@ -12,6 +12,17 @@ public class Tiles {
 
     private final int color;
 
+    public Tiles(int width, int height) {
+        newTile = new Pair<>(0, 0);
+        changeColorTiles = new Vector<>();
+        availableTiles = new Vector<>();
+        availableTiles.add(new Pair<>(width/2 - 2, height/2));
+        availableTiles.add(new Pair<>(width/2 + 1, height/2 - 1));
+        availableTiles.add(new Pair<>(width/2 - 1, height/2 + 1));
+        availableTiles.add(new Pair<>(width/2, height/2 - 2));
+        usedTiles = new Vector<>();
+        color = 0;
+    }
     public Tiles(Vector<Pair<Integer, Integer>> changeColorTiles,
                  Vector<Pair<Integer, Integer>> availableTiles,
                  Pair<Integer, Integer> newTile,

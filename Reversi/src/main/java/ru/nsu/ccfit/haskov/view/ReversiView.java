@@ -19,7 +19,10 @@ public class ReversiView {
     private boolean status;
 
     public ReversiView(ReversiController reversiController,
-                       GridPane gridPane, Text textBlack, Text textWhite, StackPane stackPane) {
+                       GridPane gridPane,
+                       Text textBlack,
+                       Text textWhite,
+                       StackPane stackPane) {
         fieldView = new FieldView(gridPane, reversiController);
         scoreBlack = new ScoreBoard(textBlack);
         scoreWhite = new ScoreBoard(textWhite);
@@ -32,6 +35,7 @@ public class ReversiView {
         if (!Objects.isNull(resultScreen)) {
             resultScreen.hide();
         }
+        fieldView.deleteField();
         fieldView = new FieldView(gridPane, reversiController);
         scoreBlack = new ScoreBoard(textBlack);
         scoreWhite = new ScoreBoard(textWhite);
