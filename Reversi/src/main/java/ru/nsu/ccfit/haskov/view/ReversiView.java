@@ -4,6 +4,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Pair;
+import ru.nsu.ccfit.haskov.model.CellColor;
 import ru.nsu.ccfit.haskov.reversi.ReversiController;
 
 import java.util.Objects;
@@ -44,20 +45,15 @@ public class ReversiView {
 
     public void updateView(Tiles tiles, int thisValue, int otherValue) {
         fieldView.updateFieldView(tiles);
-        if (tiles.getColor() == 1) {
+        if (tiles.getNewTile().getCellColor().equals(CellColor.BLACK)) {
             scoreBlack.setTextField(thisValue);
             scoreWhite.setTextField(otherValue);
         } else {
             scoreBlack.setTextField(otherValue);
             scoreWhite.setTextField(thisValue);
         }
-        status = !status;
-    }
-    private void setScoreValue(int value, int color) {
-        if (color == 1) {
-            scoreBlack.setTextField(value);
-        } else {
-            scoreWhite.setTextField(value);
+        if (!tiles.isShowStatus()) {
+            status = !status;
         }
     }
 
