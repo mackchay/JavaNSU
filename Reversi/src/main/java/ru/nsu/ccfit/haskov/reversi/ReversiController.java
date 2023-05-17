@@ -12,16 +12,13 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import ru.nsu.ccfit.haskov.model.Move;
-import ru.nsu.ccfit.haskov.model.ReversiModel;
-import ru.nsu.ccfit.haskov.reversi.GameApplication;
+import ru.nsu.ccfit.haskov.model.*;
+import ru.nsu.ccfit.haskov.model.player.Bot;
 import ru.nsu.ccfit.haskov.view.ReversiView;
 import ru.nsu.ccfit.haskov.view.Tiles;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.Objects;
-import java.util.Vector;
 
 public class ReversiController {
     private ReversiModel reversiModel;
@@ -76,35 +73,45 @@ public class ReversiController {
         stage.setScene(scene);
         stage.show();
     }
+
+    private void putBotChip() {
+        PauseTransition delay = new PauseTransition(Duration.seconds(1));
+        delay.setOnFinished( event -> {
+            MoveResult botMove = reversiModel.moveBot();
+            Tiles botTiles = new Tiles(
+                    botMove.getMove().getPainted(),
+                    botMove.getAvailableCells(),
+                    botMove.getMove().getAddedTile(),
+                    true);
+            reversiView.updateView(botTiles,
+                    botMove.getPlayerScore(),
+                    botMove.getOpponentScore()
+            );
+            if (reversiModel.isGameOver()) {
+                reversiView.showResult(reversiModel.getWinner().equals(CellColor.BLACK));
+            }
+        });
+        delay.play();
+    }
+
+    private void putPlayerChip(Cell cell) {
+        MoveResult humanMove = reversiModel.moveHuman(cell);
+        Tiles humanTiles = new Tiles(
+                humanMove.getMove().getPainted(),
+                humanMove.getAvailableCells(),
+                humanMove.getMove().getAddedTile(),
+                !(reversiModel.getOpponent() instanceof Bot));
+        reversiView.updateView(
+                humanTiles,
+                humanMove.getPlayerScore(),
+                humanMove.getOpponentScore());
+    }
     @FXML
-    public void putChip(int row, int col) {
-        if (reversiModel.isAvailable(row, col, reversiModel.getHumanColor()) && reversiView.isStatusView()
-        || !reversiModel.isAvailableExist(reversiModel.getHumanColor())) {
-            Move humanMove = reversiModel.moveHuman(row, col);
-            Tiles humanTiles = new Tiles(humanMove.getPainted(),
-                    reversiModel.getAvailableTiles(reversiModel.getBotColor()),
-                            humanMove.getAddedTile(),
-                            humanMove.getOtherTiles(),
-                            reversiModel.getHumanColor());
-            reversiView.updateView(humanTiles,
-                    reversiModel.getHumanScore(),
-                    reversiModel.getBotScore());
-            PauseTransition delay = new PauseTransition(Duration.seconds(1));
-            delay.setOnFinished( event -> {
-                Move botMove = reversiModel.moveBot();
-                Tiles botTiles = new Tiles(botMove.getPainted(),
-                        reversiModel.getAvailableTiles(reversiModel.getHumanColor()),
-                        botMove.getAddedTile(),
-                        botMove.getOtherTiles(),
-                        reversiModel.getBotColor());
-                reversiView.updateView(botTiles,
-                        reversiModel.getBotScore(),
-                        reversiModel.getHumanScore());
-                if (reversiModel.isGameOver()) {
-                    reversiView.showResult(reversiModel.getWinner() == reversiModel.getHumanColor());
-                }
-            });
-            delay.play();
+    public void putChip(Cell cell) {
+        if (reversiModel.isAvailable(cell) && reversiView.isStatusView()) {
+            putPlayerChip(cell);
+            if (reversiModel.getCurrentPlayer() instanceof Bot)
+                putBotChip();
         }
     }
 }

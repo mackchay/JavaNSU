@@ -1,4 +1,4 @@
-module com.example.reversi {
+module ru.nsu.ccfit.haskov {
     requires javafx.controls;
     requires javafx.fxml;
             

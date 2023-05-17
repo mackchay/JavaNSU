@@ -1,31 +1,24 @@
 package ru.nsu.ccfit.haskov.model;
 
-import javafx.util.Pair;
+import ru.nsu.ccfit.haskov.model.Cell;
 
 import java.util.Vector;
 
 public class Move {
-    private final Vector<Pair<Integer, Integer>> painted;
-    private final Pair<Integer, Integer> addedTile;
-    private final Vector<Pair<Integer, Integer>> otherTiles;
+    private final Vector<Cell> painted;
+    private final Cell addedTile;
 
-    Move(Vector<Pair<Integer, Integer>> painted,
-         Pair<Integer, Integer> addedTile,
-         Vector<Pair<Integer, Integer>> otherTiles) {
+    public Move(Vector<Cell> painted,
+                Cell addedTile) {
         this.painted = painted;
         this.addedTile = addedTile;
-        this.otherTiles = otherTiles;
     }
 
-    public Pair<Integer, Integer> getAddedTile() {
+    public Cell getAddedTile() {
         return addedTile;
     }
 
-    public Vector<Pair<Integer, Integer>> getOtherTiles() {
-        return otherTiles;
-    }
-
-    public Vector<Pair<Integer, Integer>> getPainted() {
+    public Vector<Cell> getPainted() {
         return painted;
     }
 }

@@ -1,80 +1,87 @@
 package ru.nsu.ccfit.haskov.model;
 
-import javafx.util.Pair;
-
-import java.util.Vector;
+import ru.nsu.ccfit.haskov.model.player.Bot;
+import ru.nsu.ccfit.haskov.model.player.Player;
 
 public class ReversiModel {
-    private final Player human;
-    private final Bot bot;
+    private final Player player1;
+    private final Player player2;
     private final static int startScore = 2;
-
-    private int winner = 0;
-    private final FieldModel fieldModel;
+    private CellColor winner = CellColor.EMPTY;
+    private final BoardModel boardModel;
+    private CellColor turn;
 
     public ReversiModel() {
-        fieldModel = new FieldModel();
-        human = new Player(fieldModel.getColorA(), startScore);
-        bot = new Bot(fieldModel.getColorB(), startScore);
+        boardModel = new BoardModel();
+        player1 = new Player(CellColor.BLACK, startScore, boardModel.checkAvailable(CellColor.BLACK));
+        player2 = new Player(CellColor.WHITE, startScore, boardModel.checkAvailable(CellColor.WHITE));
+        turn = CellColor.BLACK;
     }
 
-    public boolean isAvailable(int row, int col, int color) {
-        return fieldModel.getAvailTiles(color).contains(new Pair<>(row, col));
+    public Player getCurrentPlayer() {
+        if (turn.equals(player1.getCellColor())) {
+            return player1;
+        }
+        return player2;
     }
 
-    public Vector<Pair<Integer, Integer>> getAvailableTiles(int color) {
-        return fieldModel.getAvailTiles(color);
+    public Player getOpponent() {
+        if (!turn.equals(player1.getCellColor())) {
+            return player1;
+        }
+        return player2;
     }
 
-    public boolean isAvailableExist(int color) {
-        return fieldModel.getAvailTiles(color).size() > 0;
-    }
-    public Move moveBot() {
-        Move move = bot.makeMove(fieldModel);
-        bot.setScore(bot.getScore() + move.getPainted().size());
-        human.setScore(human.getScore() - move.getPainted().size() + 1);
-        setWinner();
-        return move;
+    public boolean isAvailable(Cell cell) {
+        return getCurrentPlayer().getAvailableCells().contains(cell);
     }
 
-    public Move moveHuman(int row, int col) {
-        Move move = fieldModel.updateFieldData(human.getColor(), row, col);
-        human.setScore(human.getScore() + move.getPainted().size());
-        bot.setScore(bot.getScore() - move.getPainted().size() + 1);
-        setWinner();
-        return move;
+    public MoveResult moveBot() {
+        Bot bot = (Bot) getCurrentPlayer();
+        Move move = bot.makeMove(boardModel);
+        return result(move);
+    }
+
+    private MoveResult result(Move move) {
+        Player opponent = getOpponent();
+        Player player = getCurrentPlayer();
+        opponent.setScore(getOpponent().getScore() - move.getPainted().size() + 1);
+        opponent.setAvailableCells(boardModel.checkAvailable(opponent.getCellColor()));
+        MoveResult moveResult = new MoveResult(move,
+                opponent.getAvailableCells(),
+                player.getScore(),
+                opponent.getScore()
+        );
+        finalizePlayerMove();
+        return moveResult;
+    }
+
+    public MoveResult moveHuman(Cell cell) {
+        Move move = getCurrentPlayer().makeMove(boardModel, cell);
+        return result(move);
     }
 
     private void setWinner() {
-        if (human.getScore() > bot.getScore()) {
-            winner = human.getColor();
-        }
-        else {
-            winner = bot.getColor();
+        if (player1.getScore() > player2.getScore()) {
+            winner = player1.getCellColor();
+        } else {
+            winner = player2.getCellColor();
         }
     }
 
-    public int getWinner() {
+    public CellColor getWinner() {
         return winner;
     }
 
-    public int getHumanColor() {
-        return human.getColor();
-    }
-
-    public int getHumanScore() {
-        return human.getScore();
-    }
-
-    public int getBotScore() {
-        return bot.getScore();
-    }
-
-    public int getBotColor() {
-        return bot.getColor();
-    }
-
     public boolean isGameOver() {
-        return (human.getScore() + bot.getScore()) == (fieldModel.getField_size() * fieldModel.getField_size());
+        return (player1.getScore() + player2.getScore()) == (boardModel.getField_size() * boardModel.getField_size());
+    }
+
+    private void finalizePlayerMove() {
+        Player opponent = getOpponent();
+        if (opponent.getAvailableCells().size() > 0) {
+            turn = opponent.getCellColor();
+        }
+        setWinner();
     }
 }
