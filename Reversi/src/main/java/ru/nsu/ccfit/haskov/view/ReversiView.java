@@ -15,6 +15,7 @@ public class ReversiView {
     private ScoreBoard scoreBlack;
     private ScoreBoard scoreWhite;
 
+    private TurnView turnView;
     private ResultScreen resultScreen;
     private final StackPane stackPane;
     private boolean status;
@@ -23,12 +24,16 @@ public class ReversiView {
                        GridPane gridPane,
                        Text textBlack,
                        Text textWhite,
-                       StackPane stackPane) {
+                       StackPane stackPane,
+                       Text blackTurn,
+                       Text whiteTurn) {
         fieldView = new FieldView(gridPane, reversiController);
         scoreBlack = new ScoreBoard(textBlack);
         scoreWhite = new ScoreBoard(textWhite);
         this.stackPane = stackPane;
         status = true;
+        turnView = new TurnView(blackTurn, whiteTurn);
+        turnView.setTurnView(CellColor.WHITE);
     }
 
     public void reset(ReversiController reversiController,
@@ -41,10 +46,12 @@ public class ReversiView {
         scoreBlack = new ScoreBoard(textBlack);
         scoreWhite = new ScoreBoard(textWhite);
         status = true;
+        turnView.setTurnView(CellColor.BLACK);
     }
 
     public void updateView(Tiles tiles, int thisValue, int otherValue) {
         fieldView.updateFieldView(tiles);
+        turnView.setTurnView(tiles.getNewTile().getCellColor());
         if (tiles.getNewTile().getCellColor().equals(CellColor.BLACK)) {
             scoreBlack.setTextField(thisValue);
             scoreWhite.setTextField(otherValue);

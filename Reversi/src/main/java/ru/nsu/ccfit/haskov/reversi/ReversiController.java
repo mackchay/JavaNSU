@@ -23,16 +23,20 @@ import java.nio.charset.StandardCharsets;
 public class ReversiController {
     private ReversiModel reversiModel;
     private ReversiView reversiView;
-    @FXML
     public GridPane gridPane;
     public Text textBlack;
     public Text textWhite;
     public StackPane resultField;
     public Button exitButton;
 
+    public Text blackTurn;
+
+    public Text whiteTurn;
+
     public void initialize() {
         reversiModel = new ReversiModel();
-        reversiView = new ReversiView(this, gridPane, textBlack, textWhite, resultField);
+        reversiView = new ReversiView(this, gridPane, textBlack, textWhite, resultField,
+                blackTurn, whiteTurn);
     }
     @FXML
     private void exit() {
@@ -87,9 +91,7 @@ public class ReversiController {
                     botMove.getPlayerScore(),
                     botMove.getOpponentScore()
             );
-            if (reversiModel.isGameOver()) {
-                reversiView.showResult(reversiModel.getWinner().equals(CellColor.BLACK));
-            }
+            isGameOver();
         });
         delay.play();
     }
@@ -105,6 +107,7 @@ public class ReversiController {
                 humanTiles,
                 humanMove.getPlayerScore(),
                 humanMove.getOpponentScore());
+        isGameOver();
     }
     @FXML
     public void putChip(Cell cell) {
@@ -112,6 +115,12 @@ public class ReversiController {
             putPlayerChip(cell);
             if (reversiModel.getCurrentPlayer() instanceof Bot)
                 putBotChip();
+        }
+    }
+
+    public void isGameOver() {
+        if (reversiModel.isGameOver()) {
+            reversiView.showResult(reversiModel.getWinner().equals(CellColor.BLACK));
         }
     }
 }
