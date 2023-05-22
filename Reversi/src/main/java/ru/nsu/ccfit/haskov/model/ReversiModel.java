@@ -1,7 +1,6 @@
 package ru.nsu.ccfit.haskov.model;
 
-import ru.nsu.ccfit.haskov.model.player.Bot;
-import ru.nsu.ccfit.haskov.model.player.Player;
+import java.util.Vector;
 
 public class ReversiModel {
     private final Player player1;
@@ -14,7 +13,7 @@ public class ReversiModel {
     public ReversiModel() {
         boardModel = new BoardModel();
         player1 = new Player(CellColor.BLACK, startScore, boardModel.checkAvailable(CellColor.BLACK));
-        player2 = new Player(CellColor.WHITE, startScore, boardModel.checkAvailable(CellColor.WHITE));
+        player2 = new Bot(CellColor.WHITE, startScore, boardModel.checkAvailable(CellColor.WHITE));
         turn = CellColor.BLACK;
     }
 
@@ -47,8 +46,15 @@ public class ReversiModel {
         Player player = getCurrentPlayer();
         opponent.setScore(getOpponent().getScore() - move.getPainted().size() + 1);
         opponent.setAvailableCells(boardModel.checkAvailable(opponent.getCellColor()));
+        Vector<Cell> availableCells;
+        if (opponent.getAvailableCells().size() > 0) {
+            availableCells = opponent.getAvailableCells();
+        }
+        else {
+            availableCells = player.getAvailableCells();
+        }
         MoveResult moveResult = new MoveResult(move,
-                opponent.getAvailableCells(),
+                availableCells,
                 player.getScore(),
                 opponent.getScore()
         );
@@ -74,7 +80,7 @@ public class ReversiModel {
     }
 
     public boolean isGameOver() {
-        return (player1.getScore() + player2.getScore()) == (boardModel.getField_size() * boardModel.getField_size());
+        return player1.getAvailableCells().size() == 0 && player2.getAvailableCells().size() == 0;
     }
 
     private void finalizePlayerMove() {

@@ -26,7 +26,7 @@ public class Cell {
         return row;
     }
 
-    public void setCellColor(CellColor cellColor) {
+    protected void setCellColor(CellColor cellColor) {
         this.cellColor = cellColor;
     }
 

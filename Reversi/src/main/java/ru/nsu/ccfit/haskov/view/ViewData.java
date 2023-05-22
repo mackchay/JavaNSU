@@ -1,19 +1,18 @@
 package ru.nsu.ccfit.haskov.view;
 
-import javafx.util.Pair;
 import ru.nsu.ccfit.haskov.model.Cell;
-import ru.nsu.ccfit.haskov.model.CellColor;
 
 import java.util.Vector;
 
-public class Tiles {
+public class ViewData {
     private final Vector<Cell> changeColorTiles;
     private final Vector<Cell> availableTiles;
     private final Cell newTile;
 
+    private final boolean changePlayer;
     private final boolean showStatus;
 
-    public Tiles(int width, int height) {
+    public ViewData(int width, int height) {
         newTile = new Cell(0, 0);
         changeColorTiles = new Vector<>();
         availableTiles = new Vector<>();
@@ -22,14 +21,16 @@ public class Tiles {
         availableTiles.add(new Cell(width/2 - 1, height/2 + 1));
         availableTiles.add(new Cell(width/2, height/2 - 2));
         showStatus = true;
+        changePlayer = true;
     }
-    public Tiles(Vector<Cell> changeColorTiles,
-                 Vector<Cell> availableTiles,
-                 Cell newTile,
-                 boolean showStatus) {
+    public ViewData(Vector<Cell> changeColorTiles,
+                    Vector<Cell> availableTiles,
+                    Cell newTile,
+                    boolean changePlayer, boolean showStatus) {
         this.changeColorTiles = changeColorTiles;
         this.newTile = newTile;
         this.availableTiles = availableTiles;
+        this.changePlayer = changePlayer;
         this.showStatus = showStatus;
     }
 
@@ -47,5 +48,13 @@ public class Tiles {
 
     public boolean isShowStatus() {
         return showStatus;
+    }
+
+    public boolean isChangePlayer() {
+        return changePlayer;
+    }
+
+    public boolean getStatusValue() {
+        return this.isShowStatus() == this.isChangePlayer();
     }
 }

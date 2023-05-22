@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.haskov.model.player;
+package ru.nsu.ccfit.haskov.model;
 
 import ru.nsu.ccfit.haskov.model.BoardModel;
 import ru.nsu.ccfit.haskov.model.Cell;
@@ -8,11 +8,11 @@ import ru.nsu.ccfit.haskov.model.Move;
 import java.util.Vector;
 
 public class Player {
-    protected final CellColor cellColor;
-    protected int score;
-    protected Vector<Cell> availableCells;
+    private final CellColor cellColor;
+    private int score;
+    private Vector<Cell> availableCells;
 
-    public Player(CellColor cellColor, int score, Vector<Cell> availableCells) {
+    protected Player(CellColor cellColor, int score, Vector<Cell> availableCells) {
         this.cellColor = cellColor;
         this.score = score;
         this.availableCells = availableCells;
@@ -22,21 +22,21 @@ public class Player {
         return cellColor;
     }
 
-    public void setScore(int score) {
+    protected void setScore(int score) {
         this.score = score;
     }
-    public int getScore() {
+    protected int getScore() {
         return score;
     }
 
-    public void setAvailableCells(Vector<Cell> availableCells) {
+    protected void setAvailableCells(Vector<Cell> availableCells) {
         this.availableCells = availableCells;
     }
-    public Vector<Cell> getAvailableCells() {
+    protected Vector<Cell> getAvailableCells() {
         return availableCells;
     }
 
-    public Move makeMove(BoardModel boardModel, Cell cell) {
+    protected Move makeMove(BoardModel boardModel, Cell cell) {
         cell.setCellColor(cellColor);
         Vector<Cell> painted = boardModel.updateFieldData(cell);
         availableCells = boardModel.checkAvailable(cellColor);

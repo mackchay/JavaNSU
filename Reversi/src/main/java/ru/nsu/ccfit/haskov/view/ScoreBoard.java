@@ -12,4 +12,8 @@ public class ScoreBoard {
     void setTextField(int value) {
         textField.setText(Integer.toString(value));
     }
- }
+
+    String getText() {
+        return textField.getText();
+    }
+}
