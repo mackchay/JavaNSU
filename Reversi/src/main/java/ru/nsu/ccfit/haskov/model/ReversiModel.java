@@ -90,4 +90,9 @@ public class ReversiModel {
         }
         setWinner();
     }
+
+    public void checkHighScores() {
+        HighScoreBoard highScoreBoard = new HighScoreBoard();
+        highScoreBoard.addRecord(player1.getScore(), player2.getScore());
+    }
 }

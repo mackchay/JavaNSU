@@ -118,7 +118,8 @@ public class ReversiController {
         reversiView.updateView(
                 humanViewData,
                 humanMove.getPlayerScore(),
-                humanMove.getOpponentScore());
+                humanMove.getOpponentScore()
+        );
         isGameOver();
     }
 
@@ -135,6 +136,7 @@ public class ReversiController {
     public void isGameOver() {
         if (reversiModel.isGameOver()) {
             reversiView.showResult(reversiModel.getWinner().equals(CellColor.BLACK));
+            reversiModel.checkHighScores();
         }
     }
 }

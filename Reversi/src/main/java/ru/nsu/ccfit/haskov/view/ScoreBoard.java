@@ -8,12 +8,7 @@ public class ScoreBoard {
         this.textField = text;
         text.setText(Integer.toString(2));
     }
-
     void setTextField(int value) {
         textField.setText(Integer.toString(value));
-    }
-
-    String getText() {
-        return textField.getText();
     }
 }

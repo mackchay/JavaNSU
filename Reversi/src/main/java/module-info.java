@@ -9,4 +9,5 @@ module ru.nsu.ccfit.haskov {
     exports ru.nsu.ccfit.haskov.reversi;
     exports ru.nsu.ccfit.haskov.highscore;
     opens ru.nsu.ccfit.haskov.reversi to javafx.fxml;
+    exports ru.nsu.ccfit.haskov.model;
 }

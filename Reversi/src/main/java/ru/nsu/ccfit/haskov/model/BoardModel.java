@@ -33,10 +33,6 @@ public class BoardModel {
         return cells[row][col].getCellColor().equals(CellColor.EMPTY);
     }
 
-    int getField_size() {
-        return size;
-    }
-
     public Vector<Cell> updateFieldData(Cell cell) {
 
         CellColor cellColor = cell.getCellColor();

@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.haskov.view;
+package ru.nsu.ccfit.haskov.model;
 
 import javafx.scene.text.Text;
 
@@ -14,7 +14,7 @@ public class HighScoreBoard {
 
     void addRecord(int playerScore, int opponentScore) {
         try {
-            String filename = "src/main/highscore.txt";
+            String filename = "src/main/files/high-scores.txt";
             FileReader fileReader = new FileReader(filename);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
@@ -22,7 +22,7 @@ public class HighScoreBoard {
             Vector<String[]> vector = new Vector<>();
             while ((line = bufferedReader.readLine()) != null && index < 5) {
                 String[] data = line.split(" ");
-                if (playerScore - opponentScore > Integer.getInteger(data[0]) - Integer.getInteger(data[1])) {
+                if (playerScore - opponentScore > (Integer.parseInt(data[0]) - Integer.parseInt(data[1]))) {
                     vector.add(new String[]{Integer.toString(playerScore), Integer.toString(opponentScore)});
                     vector.add(data);
                     index += 2;
@@ -32,10 +32,12 @@ public class HighScoreBoard {
                     index += 1;
                 }
             }
+            fileReader.close();
             FileWriter fileWriter = new FileWriter(filename);
             for (String[] data: vector) {
                 fileWriter.write(data[0] + " " + data[1] + "\n");
             }
+            fileWriter.close();
         }
         catch (IOException e) {
             System.out.println("ErrorOutput");

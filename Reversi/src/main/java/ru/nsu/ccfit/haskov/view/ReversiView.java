@@ -12,8 +12,6 @@ public class ReversiView {
     private FieldView fieldView;
     private ScoreBoard scoreBlack;
     private ScoreBoard scoreWhite;
-
-    private HighScoreBoard highScoreBoard;
     private final TurnView turnView;
     private ResultScreen resultScreen;
     private final StackPane stackPane;
@@ -77,6 +75,5 @@ public class ReversiView {
             resultScreen = new LoseScreen(stackPane);
             resultScreen.show();
         }
-        highScoreBoard.addRecord(Integer.getInteger(scoreBlack.getText()), Integer.getInteger(scoreBlack.getText()));
     }
 }
