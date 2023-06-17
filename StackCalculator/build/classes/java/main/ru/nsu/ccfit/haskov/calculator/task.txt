@@ -1,6 +1,0 @@
-DEFINE a 123
-DEFINE b 387
-PUSH a
-PUSH b
-*
-PRINT

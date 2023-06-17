@@ -1,6 +1,7 @@
 package ru.nsu.ccfit.haskov.reversi;
 
 import javafx.animation.PauseTransition;
+import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,10 +13,12 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ru.nsu.ccfit.haskov.highscore.HighScoresApplication;
+import ru.nsu.ccfit.haskov.highscore.HighScoresController;
 import ru.nsu.ccfit.haskov.model.*;
-import ru.nsu.ccfit.haskov.model.player.Bot;
+import ru.nsu.ccfit.haskov.model.Bot;
 import ru.nsu.ccfit.haskov.view.ReversiView;
-import ru.nsu.ccfit.haskov.view.Tiles;
+import ru.nsu.ccfit.haskov.view.ViewData;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -23,37 +26,38 @@ import java.nio.charset.StandardCharsets;
 public class ReversiController {
     private ReversiModel reversiModel;
     private ReversiView reversiView;
-    @FXML
     public GridPane gridPane;
     public Text textBlack;
     public Text textWhite;
     public StackPane resultField;
     public Button exitButton;
 
+    public Text blackTurn;
+
+    public Text whiteTurn;
+
     public void initialize() {
         reversiModel = new ReversiModel();
-        reversiView = new ReversiView(this, gridPane, textBlack, textWhite, resultField);
+        reversiView = new ReversiView(this, gridPane, textBlack, textWhite, resultField,
+                blackTurn, whiteTurn);
     }
+
     @FXML
     private void exit() {
         Stage currentStage = (Stage) exitButton.getScene().getWindow();
         currentStage.close();
         Platform.exit();
     }
+
     @FXML
     public void restart() {
         reversiModel = new ReversiModel();
         reversiView.reset(this, gridPane, textBlack, textWhite);
     }
 
-    public void showHighScores() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("high-scores.fxml"));
-        AnchorPane root = fxmlLoader.load();
-        Scene scene = new Scene(root, 720, 720);
-        Stage stage = new Stage();
-        stage.setTitle("HIGHSCORES");
-        stage.setScene(scene);
-        stage.show();
+    public void showHighScores() throws Exception {
+        HighScoresApplication highScoresApplication = new HighScoresApplication();
+        highScoresApplication.start(new Stage());
     }
 
     public void showAbout() throws IOException {
@@ -76,19 +80,25 @@ public class ReversiController {
 
     private void putBotChip() {
         PauseTransition delay = new PauseTransition(Duration.seconds(1));
-        delay.setOnFinished( event -> {
+        delay.setOnFinished(event -> {
             MoveResult botMove = reversiModel.moveBot();
-            Tiles botTiles = new Tiles(
+            ViewData botViewData = new ViewData(
                     botMove.getMove().getPainted(),
                     botMove.getAvailableCells(),
                     botMove.getMove().getAddedTile(),
-                    true);
-            reversiView.updateView(botTiles,
+                    !botMove.getMove().getAddedTile().getCellColor().equals(
+                            reversiModel.getCurrentPlayer().getCellColor()
+                    ),
+                    true
+            );
+            reversiView.updateView(botViewData,
                     botMove.getPlayerScore(),
                     botMove.getOpponentScore()
             );
-            if (reversiModel.isGameOver()) {
-                reversiView.showResult(reversiModel.getWinner().equals(CellColor.BLACK));
+            isGameOver();
+            if (!reversiModel.isGameOver()
+                    && reversiModel.getCurrentPlayer().getCellColor().equals(botMove.getMove().getAddedTile().getCellColor())) {
+                delay.play();
             }
         });
         delay.play();
@@ -96,22 +106,37 @@ public class ReversiController {
 
     private void putPlayerChip(Cell cell) {
         MoveResult humanMove = reversiModel.moveHuman(cell);
-        Tiles humanTiles = new Tiles(
+        ViewData humanViewData = new ViewData(
                 humanMove.getMove().getPainted(),
                 humanMove.getAvailableCells(),
                 humanMove.getMove().getAddedTile(),
-                !(reversiModel.getOpponent() instanceof Bot));
+                !humanMove.getMove().getAddedTile().getCellColor().equals(
+                        reversiModel.getCurrentPlayer().getCellColor()
+                ),
+                false
+        );
         reversiView.updateView(
-                humanTiles,
+                humanViewData,
                 humanMove.getPlayerScore(),
-                humanMove.getOpponentScore());
+                humanMove.getOpponentScore()
+        );
+        isGameOver();
     }
+
     @FXML
     public void putChip(Cell cell) {
         if (reversiModel.isAvailable(cell) && reversiView.isStatusView()) {
             putPlayerChip(cell);
-            if (reversiModel.getCurrentPlayer() instanceof Bot)
+            if (reversiModel.getCurrentPlayer() instanceof Bot) {
                 putBotChip();
+            }
+        }
+    }
+
+    public void isGameOver() {
+        if (reversiModel.isGameOver()) {
+            reversiView.showResult(reversiModel.getWinner().equals(CellColor.BLACK));
+            reversiModel.checkHighScores();
         }
     }
 }
